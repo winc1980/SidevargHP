@@ -15,6 +15,96 @@ SP表示
 ブロックの基底要素
 -----------------------------------------------*/
 
+
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    font-family: 'Noto Sans', serif;
+}
+
+body * {
+    font-family: 'Noto Sans JP', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+body {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+.container .row {
+    width: 100%;
+    min-height: 200px;
+}
+
+.container .contents {
+    padding: 30px 10px;
+}
+
+.message {
+    padding-top: 60px;
+    margin-bottom: 30px;
+}
+
+.message p {
+    line-height: 30px;
+}
+
+
+/* 見出しサブタイトルの装飾 */
+
+.contents .title p::before {
+    content: '';
+    margin-right: 1.6rem;
+    border-right: 3px solid #3A5199;
+    background: #3A5199;
+}
+
+
+/* section {
+    max-width: 1320px;
+    margin: 0 auto;
+} */
+
+.title h2 {
+    font-family: 'Montserrat';
+    font-size: 3.5rem;
+    margin: 0 0 7px 0;
+}
+
+.title p {
+    font-weight: 500;
+    font-size: 1.6rem;
+}
+
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.5s, transform 1s;
+}
+
+.fade.active {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
 /*-----------------------------------------------
 ヘッダー
 -----------------------------------------------*/
@@ -26,6 +116,71 @@ SP表示
 /*-----------------------------------------------
 サークル情報
 -----------------------------------------------*/
+
+#info {
+    width: 100%;
+    background: #F7F5EE;
+    padding: 60px 0;
+}
+#info .container {
+    flex-wrap: wrap-reverse;
+    display: flex;
+}
+
+#info .contents h2,
+
+#info .contents p, table {
+    color: rgb(21, 20, 20);
+}
+
+#info .images {
+    justify-content: center;
+    grid-gap: 10px;
+    margin: 0 auto;
+}
+
+#info .images div {
+    width: 40%;
+    height: 390px;
+    background: rgb(241, 236, 236);
+}
+
+#info .images div img {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#info .message div{
+    width: 40%;
+    height: 390px;
+    background: rgb(241, 236, 236);
+}
+#info .message table {
+    border-collapse: collapse;
+    width: 95%;
+    height: 100%;
+    text-align:left;/*左揃え*/
+}
+/* 棒線を表示する */
+#info .message table tr {
+    border-top: #212122 solid 1px;
+    margin-top: 20px;
+}
+/* 一番下棒線を表示 */
+#info .message table tr:last-child {
+    border-bottom: #1e1e20 solid 1px;
+}
+
+#info .message table th {
+    padding-left: 1.4rem;
+}
+
+/* infoの行の間隔 */
+#info .message table tr td {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 
 /*-----------------------------------------------
 ブログ(ホーム)
