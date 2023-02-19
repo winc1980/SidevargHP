@@ -107,6 +107,7 @@ img {
 .fade.active {
     opacity: 1;
     transform: translateY(0px);
+}
 
 /*-----------------------------------------------
 ヘッダー
@@ -119,12 +120,12 @@ img {
 /*-----------------------------------------------
 サークル情報
 -----------------------------------------------*/
-
-#info {
+#info{
     width: 100%;
     background: #F7F5EE;
     padding: 60px 0;
 }
+
 #info .container {
     flex-wrap: wrap-reverse;
     display: flex;
