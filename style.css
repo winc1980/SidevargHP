@@ -15,8 +15,6 @@ SP表示
 ブロックの基底要素
 -----------------------------------------------*/
 
-
-
 html {
     scroll-behavior: smooth;
     font-size: 62.5%;
@@ -38,6 +36,13 @@ p {
     margin: 0;
 }
 
+#page {
+    background-color: #000000;
+}
+
+img {
+    width: 100%;
+}
 
 
 .container {
@@ -102,8 +107,6 @@ p {
 .fade.active {
     opacity: 1;
     transform: translateY(0px);
-}
-
 
 /*-----------------------------------------------
 ヘッダー
@@ -202,6 +205,145 @@ p {
 ギャラリー
 -----------------------------------------------*/
 
+
+#gallery {
+    width: 100%;
+    background: rgb(255, 255, 255);
+    padding: 60px 0;
+    position: relative;
+    margin: auto;
+}
+
+#gallery .gallery_container {
+    margin-bottom: 30px;
+}
+
+#gallery .gallery_title_h2 {
+    font-size: 3.5rem;
+    font-family: 'Montserrat';
+    margin: 0;
+}
+
+#gallery .gallery_title {
+    text-align: center;
+}
+
+#gallery .gallery_text {
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+#gallery p span {
+    display: inline-block;
+    border-top: #3A5199 solid 2px;
+    padding-top: 5px;
+    margin-top: 5px;
+}
+
+#gallery .gallery_button_pc_only {
+    display: none;
+}
+
+
+/* 全体のスタイル */
+
+.swiper-wrapper {
+    width: 100%;
+    height: 250px;
+}
+
+
+/* 全スライド共通スタイル */
+
+.swiper-slide {
+    color: #ffffff;
+    width: 78.93vw;
+    height: 296px;
+    text-align: center;
+    line-height: 110px;
+}
+
+
+/* ページネーションのサイズと色 */
+
+.swiper-pagination-bullet {
+    background-color: black;
+    height: 14px;
+    width: 14px;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet-active {
+    position: relative;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet-active::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: #000000;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet-active::after {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 14px;
+    border: #FFFFFF solid 3px;
+    border-radius: 50%;
+    position: absolute;
+    top: -3px;
+    left: -3px;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 12px;
+}
+
+.swiper-pagination {
+    position: relative !important;
+}
+
+
+/* 幅・高さを指定 */
+
+.swiper-button-prev,
+.swiper-button-next {
+    height: 50px;
+    width: 50px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    background-size: 50px 50px;
+}
+
+
+/* 前に戻る画像パス */
+
+.swiper-button-prev {
+    background-image: url(src/page-prev.png);
+}
+
+
+/* 次に進む画像パス */
+
+.swiper-button-next {
+    background-image: url(src/page-next.png);
+}
+
+.swiper-button-next {
+    right: 15px;
+}
+
+.swiper-button-prev {
+    left: 15px;
+}
+
 /*-----------------------------------------------
 活動日程
 -----------------------------------------------*/
@@ -270,11 +412,19 @@ p {
 /*----------------------------------------------------------------------------------------------
 PC表示
 ----------------------------------------------------------------------------------------------*/
-
+@media screen and (min-width: 768px) {
 /*-----------------------------------------------
 ブロックの基底要素
 -----------------------------------------------*/
-
+.container .row {
+    width: 50%;
+    height: 100%;
+}
+.container .contents {
+    max-width: 500px;
+    padding: 50px 20px;
+    margin: 0 auto;
+}
 /*-----------------------------------------------
 ヘッダー
 -----------------------------------------------*/
@@ -306,7 +456,21 @@ PC表示
 /*-----------------------------------------------
 ギャラリー
 -----------------------------------------------*/
-
+.swiper-slide {
+    color: #ffffff;
+    width: 414px;
+    height: 100%;
+    text-align: center;
+}
+#gallery .gallery_button_pc_only {
+    display: block;
+}
+.swiper-button-prev {
+    top: 38%;
+}
+.swiper-button-next {
+    top: 38%;
+}
 /*-----------------------------------------------
 活動日程
 -----------------------------------------------*/
@@ -318,3 +482,4 @@ PC表示
 /*-----------------------------------------------
 フッター
 -----------------------------------------------*/
+}
