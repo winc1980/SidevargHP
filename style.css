@@ -69,12 +69,12 @@ p {
 
 /* 見出しサブタイトルの装飾 */
 
-.contents .title p::before {
+/* .contents .title p::before {
     content: '';
     margin-right: 1.6rem;
     border-right: 3px solid #3A5199;
     background: #3A5199;
-}
+} */
 
 
 /* section {
@@ -209,6 +209,59 @@ p {
 /*-----------------------------------------------
 活動場所
 -----------------------------------------------*/
+#place .contents{
+    text-align: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    /* background-color: aqua; */
+}
+#place .contents .message{
+    text-align: left;
+}
+#place .btn{
+    font-size: 1.2rem;
+    /* font-weight: 00; */
+    width: 100%;
+    /* line-height: 1.5; */
+    position: relative;
+    display: inline-block;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    /* color: #212529; */
+    background: transparent;
+    /* border-radius: 0.5rem; */
+}
+#place .btn:hover{
+    /* opacity: 0.2; */
+    background: rgba(0,0,0,0.4);
+}
+#place #button{
+    /* background-color: #3A5199; */
+    display: flex;
+}
+#place #btn1{
+    /* position: absolute; 
+    left: 0; */
+    margin-right: 10%;
+}
+#place #btn2{
+    /* position: absolute;
+    right: 0; */
+    margin-left: 10%;
+}
+#place .fa-position-right {
+    position: absolute;
+    top: calc(50% - .5em);
+    right: 1rem;
+}
+
+
 
 /*-----------------------------------------------
 フッター
