@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SIDEVARG</title>
+    <!-- Swiper.js 4.3.3 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" media="all">
+    <!-- <link rel="stylesheet" type="text/css" href="assets/animate.min.css" media="all"> -->
+
 </head>
 <body>
     <header>
@@ -66,8 +71,41 @@
         <!-- 各ブログここまで -->
 
         <!-- ギャラリーここから -->
-        <section id=gallery"">
+        <section id="gallery">
+            <div class="gallery_container fade">
+                <div class="gallery_title">
+                    <h2 style="margin: 0" class="gallery_title_h2">Gallery</h2>
+                </div>
 
+                <div class="gallery_text">
+                    <p><span>活動風景</span></p>
+                </div>
+            </div>
+
+            <div class="swiper-parent fade">
+                <!-- Swiper START -->
+                <div class="swiper-container">
+                    <!-- メイン表示部分 -->
+                    <div class="swiper-wrapper">
+                        <!-- 各スライド -->
+                        <div class="swiper-slide"><img src="src/slider1.jpg" alt="Swiper01"></div>
+                        <div class="swiper-slide"><img src="src/slider2.jpg" alt="Swiper02"></div>
+                        <div class="swiper-slide"><img src="src/slider3.jpg" alt="Swiper03"></div>
+                        <div class="swiper-slide"><img src="src/slider4.jpg" alt="Swiper06"></div>
+                        <div class="swiper-slide"><img src="src/slider5.jpg" alt="Swiper05"></div>
+                        <div class="swiper-slide"><img src="src/slider1.jpg" alt="Swiper01"></div>
+                        <div class="swiper-slide"><img src="src/slider3.jpg" alt="Swiper03"></div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+
+                    <div class="swiper-button-prev gallery_button_pc_only"></div>
+
+                    <div class="swiper-button-next gallery_button_pc_only"></div>
+                </div>
+            </div>
+
+            <!-- Swiper END -->
         </section>
         <!-- ギャラリーここまで -->
 
@@ -89,6 +127,10 @@
         </section>
         <!-- フッターここまで -->
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
 
     <footer>
 
