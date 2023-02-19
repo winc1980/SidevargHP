@@ -15,24 +15,24 @@ SP表示
 -----------------------------------------------*/
 
 html {
-    scroll-behavior: smooth;
-    font-size: 62.5%;
-    font-family: 'Noto Sans', serif;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  font-family: "Noto Sans", serif;
 }
 
 body * {
-    font-family: 'Noto Sans JP', sans-serif;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-size: 1.6rem;
+  font-family: "Noto Sans JP", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: 1.6rem;
 }
 
 body {
-    margin: 0;
+  margin: 0;
 }
 
 p {
-    margin: 0;
+  margin: 0;
 }
 
 #page {
@@ -45,31 +45,30 @@ img {
 
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    max-width: 1320px;
-    margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1320px;
+  margin: 0 auto;
 }
 
 .container .row {
-    width: 100%;
-    min-height: 200px;
+  width: 100%;
+  min-height: 200px;
 }
 
 .container .contents {
-    padding: 30px 10px;
+  padding: 30px 10px;
 }
 
 .message {
-    padding-top: 60px;
-    margin-bottom: 30px;
+  padding-top: 60px;
+  margin-bottom: 30px;
 }
 
 .message p {
-    line-height: 30px;
+  line-height: 30px;
 }
-
 
 /* 見出しサブタイトルの装飾 */
 
@@ -80,32 +79,31 @@ img {
     background: #3A5199;
 } */
 
-
 /* section {
     max-width: 1320px;
     margin: 0 auto;
 } */
 
 .title h2 {
-    font-family: 'Montserrat';
-    font-size: 3.5rem;
-    margin: 0 0 7px 0;
+  font-family: "Economica";
+  font-size: 3.5rem;
+  margin: 0 0 7px 0;
 }
 
 .title p {
-    font-weight: 500;
-    font-size: 1.6rem;
+  font-weight: 500;
+  font-size: 1.6rem;
 }
 
 .fade {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1.5s, transform 1s;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.5s, transform 1s;
 }
 
 .fade.active {
-    opacity: 1;
-    transform: translateY(0px);
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 /*-----------------------------------------------
@@ -227,72 +225,89 @@ header {
 /*-----------------------------------------------
 サークル情報
 -----------------------------------------------*/
-#info{
-    width: 100%;
-    background: #F7F5EE;
-    padding: 60px 0;
+#info {
+  width: 100%;
+  background: white;
+  margin-bottom: 10%;
 }
+.info_container {
+  max-width: 1320px;
+  flex-wrap: wrap-reverse;
+  display: flex;
+
+  /* align-items: center; */
+  /* background-color: blue; */
+}
+.info_contents {
+  /* background-color: aqua; */
+  padding: 0 1%;
+  width: 100%;
+}
+.info_title {
+  padding-left: 9%;
 
 #info .container {
     flex-wrap: wrap-reverse;
     display: flex;
 }
-
-#info .contents h2,
-
-#info .contents p, table {
-    color: rgb(21, 20, 20);
+.info_h2 {
+  font-family: "Economica";
+  font-size: 3.5rem;
+  margin: 0 0 7px 0;
+}
+.info_title p {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.info_contents p,
+table {
+  color: rgb(21, 20, 20);
+}
+.info_message {
+  padding: 10%;
 }
 
-#info .images {
-    justify-content: center;
-    grid-gap: 10px;
-    margin: 0 auto;
+.info_message div {
+  width: 40%;
+  /* height: 390px; */
+  background: rgb(241, 236, 236);
 }
-
-#info .images div {
-    width: 40%;
-    height: 390px;
-    background: rgb(241, 236, 236);
-}
-
-#info .images div img {
-    width: 90%;
-    height: 100%;
-    object-fit: cover;
-}
-
-#info .message div{
-    width: 40%;
-    height: 390px;
-    background: rgb(241, 236, 236);
-}
-#info .message table {
-    border-collapse: collapse;
-    width: 95%;
-    height: 100%;
-    text-align:left;/*左揃え*/
+.info_message table {
+  border-collapse: collapse;
+  width: 95%;
+  height: 100%;
+  text-align: left; /*左揃え*/
 }
 /* 棒線を表示する */
-#info .message table tr {
-    border-top: #212122 solid 1px;
-    margin-top: 20px;
+.info_message table tr {
+  border-top: #5c5c5e solid 0.1rem;
+  margin-top: 20px;
 }
 /* 一番下棒線を表示 */
-#info .message table tr:last-child {
-    border-bottom: #1e1e20 solid 1px;
+.info_message table tr:last-child {
+  border-bottom: #1e1e20 solid 1px;
 }
 
-#info .message table th {
-    padding-left: 1.4rem;
+.info_message table th {
+  width: 50%;
+  padding-left: 1.4rem;
 }
 
 /* infoの行の間隔 */
-#info .message table tr td {
-    padding-top: 20px;
-    padding-bottom: 20px;
+.info_message table tr td {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 1.2rem;
 }
 
+.info_images {
+  margin: 0 auto;
+  width: 90%;
+  height: 150%;
+  box-shadow: 10px 10px 4px #ccc;
+  margin-bottom: 10%;
+  /* box-shadow: 10px 10px 4px #ccc; */
+}
 /*-----------------------------------------------
 ブログ(ホーム)
 -----------------------------------------------*/
@@ -477,59 +492,64 @@ header {
 /*-----------------------------------------------
 活動場所
 -----------------------------------------------*/
-#place .contents{
-    text-align: center;
-    margin-left: 15%;
-    margin-right: 15%;
-    /* background-color: aqua; */
+
+.place_contents {
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  /* background-color: aqua; */
 }
-#place .contents .message{
-    text-align: left;
+.place_contents .message {
+  text-align: left;
 }
-#place .btn{
-    font-size: 1.2rem;
-    /* font-weight: 00; */
-    width: 100%;
-    /* line-height: 1.5; */
-    position: relative;
-    display: inline-block;
-    padding: 1rem 2rem;
-    cursor: pointer;
-    user-select: none;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    text-align: center;
-    vertical-align: middle;
-    text-decoration: none;
-    /* color: #212529; */
-    background: transparent;
-    /* border-radius: 0.5rem; */
+.place_btn {
+  font-size: 1.2rem;
+  /* font-weight: 00; */
+  width: 100%;
+  /* line-height: 1.5; */
+  position: relative;
+  display: inline-block;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  /* color: #212529; */
+  background: transparent;
+  /* border-radius: 0.5rem; */
 }
-#place .btn:hover{
-    /* opacity: 0.2; */
-    background: rgba(0,0,0,0.4);
+.place_btn:hover {
+  /* opacity: 0.2; */
+  background: rgba(0, 0, 0, 0.4);
 }
-#place #button{
-    /* background-color: #3A5199; */
-    display: flex;
+#place #button {
+  /* background-color: #3A5199; */
+  /* display: flex; */
+  margin: 5%;
 }
-#place #btn1{
-    /* position: absolute; 
-    left: 0; */
-    margin-right: 10%;
+#place #btn1 {
+  /* position: absolute; 
+      left: 0; */
+  /* margin-right: 10%; */
+  margin-bottom: 7%;
 }
-#place #btn2{
-    /* position: absolute;
-    right: 0; */
-    margin-left: 10%;
+#place #btn2 {
+  /* position: absolute;
+      right: 0; */
+  /* margin-left: 10%; */
+  margin-bottom: 5%;
 }
 #place .fa-position-right {
-    position: absolute;
-    top: calc(50% - .5em);
-    right: 1rem;
+  position: absolute;
+  top: calc(50% - 0.5em);
+  right: 1rem;
 }
-
-
+#place .place_map {
+  width: 100%;
+}
 
 /*-----------------------------------------------
 フッター
@@ -559,7 +579,7 @@ img{
     width: 100%;
 }
 
-/*-----------------------------------------------
+  /*-----------------------------------------------
 ヘッダー
 -----------------------------------------------*/
     header {
@@ -708,24 +728,113 @@ main {
 }
 
 
-/*-----------------------------------------------
+  /*-----------------------------------------------
 サークル情報
 -----------------------------------------------*/
+  #info {
+    width: 100%;
+    background: white;
+    /* padding: 60px 0; */
+    margin-bottom: 10%;
+    margin-right: 10%;
+  }
+  .info_container {
+    flex-wrap: wrap-reverse;
+    display: flex;
+    align-items: center;
+    /* background-color: blue; */
+  }
+  .info_contents {
+    /* background-color: aqua; */
+    padding: 0 5%;
+    width: 45%;
+  }
+  .info_title {
+    padding-left: 2%;
+    padding-bottom: 10%;
+  }
+  .info_h2 {
+    font-family: "Economica";
+    font-size: 3.5rem;
+    /* margin: 0 0  0; */
+  }
 
-/*-----------------------------------------------
+  .info_title p {
+    font-weight: 500;
+    font-size: 1.6rem;
+  }
+
+  /* #info .contents h2, */
+
+  .info_contents p,
+  table {
+    color: rgb(21, 20, 20);
+  }
+
+  .info_message {
+    padding: 2%;
+  }
+  .info_message div {
+    /* width: 50%; */
+    background: rgb(241, 236, 236);
+  }
+  .info_message table {
+    border-collapse: collapse;
+    width: 110%;
+    height: 100%;
+    text-align: left; /*左揃え*/
+  }
+  /* 棒線を表示する */
+  .info_message table tr {
+    border-top: #a2a2a8 solid 1px;
+    margin-top: 20px;
+  }
+  /* 一番下棒線を表示 */
+  .info_message table tr:last-child {
+    border-bottom: #a2a2a8 solid 1px;
+  }
+
+  .info_message table th {
+    width: 35%;
+    padding-left: 0.7rem;
+  }
+
+  /* infoの行の間隔 */
+  .info_message table tr td {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .info_images {
+    width: 50%;
+    height: 150%;
+    box-shadow: 1.4rem 1.4rem 0.7rem #ccc;
+    /* box-shadow: 10px 10px 4px #ccc; */
+  }
+  /* .info_images img {
+    vertical-align: top;
+  } */
+
+  /* .info_images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  } */
+
+  /*-----------------------------------------------
 ブログ(ホーム)
 -----------------------------------------------*/
 
-/*-----------------------------------------------
+  /*-----------------------------------------------
 ブログ一覧
 
 -----------------------------------------------*/
 
-/*-----------------------------------------------
+  /*-----------------------------------------------
 ブログ（バックエンド）
 -----------------------------------------------*/
 
-/*-----------------------------------------------
+  /*-----------------------------------------------
 各ブログ
 -----------------------------------------------*/
 .eachinfo_div1 {
@@ -807,8 +916,65 @@ main {
 /*-----------------------------------------------
 活動場所
 -----------------------------------------------*/
+  .place_contents {
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    /* background-color: aqua; */
+  }
+  .place_contents .message {
+    text-align: left;
+    margin-top: 0;
+    padding-top: 10%;
+  }
+  .place_btn {
+    font-size: 1.2rem;
+    /* font-weight: 00; */
+    width: 100%;
+    /* line-height: 1.5; */
+    position: relative;
+    display: inline-block;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    /* color: #212529; */
+    background: transparent;
+    /* border-radius: 0.5rem; */
+  }
+  .place_btn:hover {
+    /* opacity: 0.2; */
+    background: rgba(0, 0, 0, 0.4);
+  }
+  #place #button {
+    /* background-color: #3A5199; */
+    display: flex;
+    margin: 5%;
+  }
+  #place #btn1 {
+    /* position: absolute; 
+      left: 0; */
+    margin-right: 10%;
+  }
+  #place #btn2 {
+    /* position: absolute;
+      right: 0; */
+    margin-left: 10%;
+  }
+  #place .fa-position-right {
+    position: absolute;
+    top: calc(50% - 0.5em);
+    right: 1rem;
+  }
+  #place .place_map {
+    width: 100%;
+  }
 
-/*-----------------------------------------------
+  /*-----------------------------------------------
 フッター
 -----------------------------------------------*/
 }
