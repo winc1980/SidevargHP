@@ -3,7 +3,32 @@
     <main>
         <!-- ヘッダー　ここから -->
         <section id="header">
-
+            <header>
+                <img class="header-logo" src="<?php echo get_theme_file_uri('src/logo.svg'); ?>" alt="" >
+                <h1 class="header-title">Waseda Cinema Circle</h1>
+                <nav class="header-nav">
+                    <ul class="header-menu">
+                        <li class="header-menu-item"><a href="#">Twitter</a></li>
+                        <li class="header-menu-item"><a href="#">Instagram</a></li>
+                        <li class="header-menu-item"><a href="#">Blog</a></li>
+                        <li class="header-menu-item"><a href="#" id="contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="hamburger-menu">
+                    <input type="checkbox" id="menu-btn-check">
+                    <label for="menu-btn-check" class="menu-btn"><span></span></label>
+                    <!-- ここからメニュー-->
+                    <div class="menu-content">
+                        <ul>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    <!--ここまでメニュー-->
+                    </div>
+                </div>
+            </header>
         </section>
         <!-- ヘッダー　ここまで -->
 
@@ -43,46 +68,49 @@
 
         <!-- サークル情報　ここから -->
         <section id="info">
-            <div class="container">
-                <div class="row fade">
-                    <div class="contents">
-                        <div class="title">
-                            <h2 style="margin: 0">Information</h2>
-                            <p>サークル情報</p>
-                        </div>
-                        <div class="message">
-                            <table>
-                                <tr>
-                                    <th>サークル名</th><td>CINEMAX SIDEVARG</td>
-                                </tr>
-                                <tr>
-                                    <th>人数</th><td>約20人</td>
-                                </tr>
-                                <tr>
-                                    <th>代表</th><td>山田太郎</td>
-                                </tr>
-                                <tr>
-                                    <th>設立</th><td>1975年</td>
-                                </tr>
-                                <tr>
-                                    <th>新歓情報</th><td>入会年中受付中<br>大学・学年問わず募集しています</td>
-                                </tr>
-                                <tr>
-                                    <th>入金方法</th><td>公式LINEから<br><a href="https://www.url">https://www.url</a></td>
-                                </tr>
-                            </table>
-
-                        </div>
-                    </div>
+            <div class="info_container">
+              <div class="info_contents">
+                <div class="info_title">
+                  <h2 class="info_h2">Information</h2>
+                  <p>サークル情報</p>
                 </div>
-                <div class="row">
-                    <div class="images fade">
-                        <div><img src="<?php echo get_theme_file_uri('src/mv-cover1.png'); ?>" class="mv_cv_img" alt=""></div>
-                    </div>
+                <div class="info_message">
+                  <table>
+                    <tr>
+                      <th>サークル名</th>
+                      <td>CINEMAX SIDEVARG</td>
+                    </tr>
+                    <tr>
+                      <th>人数</th>
+                      <td>約20人</td>
+                    </tr>
+                    <tr>
+                      <th>代表</th>
+                      <td>山田太郎</td>
+                    </tr>
+                    <tr>
+                      <th>設立</th>
+                      <td>1975年</td>
+                    </tr>
+                    <tr>
+                      <th>新歓情報</th>
+                      <td>入会年中受付中<br />大学・学年問わず募集しています</td>
+                    </tr>
+                    <tr>
+                      <th>入金方法</th>
+                      <td>
+                        公式LINEから<br /><a href="https://www.url"
+                          >https://www.url</a
+                        >
+                      </td>
+                    </tr>
+                  </table>
                 </div>
-
+              </div>
+              <div class="info_images">
+                <img src="<?php echo get_theme_file_uri('src/src/sidevarg5 1.png'); ?>" class="mv_cv_img" alt="" width="100%" height="100%" />
+              </div>
             </div>
-
         </section>
         <!-- サークル情報　ここまで -->
 
@@ -151,49 +179,59 @@
 
         <!-- 活動日程ここから -->
         <section id="schedule">
-
-
+            <div class="sidevarg-schedule">
+                <h1>Schedule</h1>
+                <h2>活動日程</h2>
+                <p>隔週月曜18:20〜ミーティングで行い、月一の土日どちらかで上映会を開いています。
+                    カレンダーに反映されていない活動詳細についてはTwitterやInstagramをご覧ください。
+                </p>
+            </div>
         </section>
         <!-- 活動日程ここまで -->
 
         <!-- 活動場所ここから -->
         <section id="place">
             <div class="container">
-                <div class="row fade">
-                    <div class="contents">
-                        <div class="title">
-                            <h2 style="margin: 0">Place</h2>
-                            <p>活動場所</p>
-                        </div>
-                        <div class="message">
-                            <p>主な活動場所は早稲田大学戸山キャンパス学生会館E910です。活動の詳細についてはTwitterやInstagramをご覧ください。※早稲田大学のHPにリンクが飛びます。</p>
-
-                        </div>
-                        <div id="button">
-                            <!-- <div id="btn1">
-                                <button class="btn" ">学生会館について<i class="fas fa-angle-right fa-position-right"></i></button>
-                            </div>
-                            <div id="btn2">
-                                <button class="btn" id="btn2">学生会館アクセス方法<i class="fas fa-angle-right fa-position-right"></i></button>
-                            </div> -->
-                            <button class="btn" id="btn1">学生会館について<i class="fas fa-angle-right fa-position-right"></i></button>
-                            <button class="btn" id="btn2">学生会館アクセス方法<i class="fas fa-angle-right fa-position-right"></i></button>
-
-                            <!-- <input type="button" value="ボタン" id="button" onclick="#" /> -->
-                        </div>
-                    </div>
+              <div class="place_contents">
+                <div class="title">
+                  <h2 style="margin: 0">Place</h2>
+                  <p>活動場所</p>
                 </div>
-                <div class="row">
-                    <div class="map fade">
-                        <div>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.5351292127925!2d130.412726115203!3d33.59141728073386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354191bf5f712adf%3A0x375bd70fbfdc83a0!2z56aP5bKh5biCIOWNmuWkmuWMuuW9ueaJgA!5e0!3m2!1sja!2sjp!4v1676770108891!5m2!1sja!2sjp" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
+                <div class="message">
+                  <p>
+                    主な活動場所は早稲田大学戸山キャンパス学生会館E910です。活動の詳細についてはTwitterやInstagramをご覧ください。※早稲田大学のHPにリンクが飛びます。
+                  </p>
                 </div>
-
+                <div id="button">
+                  <button class="place_btn" id="btn1">
+                    学生会館について<i
+                      class="fas fa-angle-right fa-position-right"
+                    ></i>
+                  </button>
+                  <button class="place_btn" id="btn2">
+                    学生会館アクセス方法<i
+                      class="fas fa-angle-right fa-position-right"
+                    ></i>
+                  </button>
+    
+                  <!-- <input type="button" value="ボタン" id="button" onclick="#" /> -->
+                </div>
+              </div>
+              <div class="place_map fade">
+                <div>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.5351292127925!2d130.412726115203!3d33.59141728073386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354191bf5f712adf%3A0x375bd70fbfdc83a0!2z56aP5bKh5biCIOWNmuWkmuWMuuW9ueaJgA!5e0!3m2!1sja!2sjp!4v1676770108891!5m2!1sja!2sjp"
+                    width="100%"
+                    height="450"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+              </div>
             </div>
-
-        </section>
+          </section>
         <!-- 活動場所ここまで -->
 
         <!-- フッターここから -->
