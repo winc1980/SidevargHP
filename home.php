@@ -1,37 +1,5 @@
 <?php get_header(); ?>
 
-    <main>
-        <!-- ヘッダー　ここから -->
-        <section id="header">
-            <header>
-                <img class="header-logo" src="<?php echo get_theme_file_uri('src/logo.svg'); ?>" alt="" >
-                <h1 class="header-title">Waseda Cinema Circle</h1>
-                <nav class="header-nav">
-                    <ul class="header-menu">
-                        <li class="header-menu-item"><a href="#">Twitter</a></li>
-                        <li class="header-menu-item"><a href="#">Instagram</a></li>
-                        <li class="header-menu-item"><a href="#">Blog</a></li>
-                        <li class="header-menu-item"><a href="#" id="contact">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="hamburger-menu">
-                    <input type="checkbox" id="menu-btn-check">
-                    <label for="menu-btn-check" class="menu-btn"><span></span></label>
-                    <!-- ここからメニュー-->
-                    <div class="menu-content">
-                        <ul>
-                            <li><a href="#">Twitter</a></li>
-                            <li><a href="#">Instagram</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    <!--ここまでメニュー-->
-                    </div>
-                </div>
-            </header>
-        </section>
-        <!-- ヘッダー　ここまで -->
-
         <!-- メインビジュアル　ここから -->
         <section id="mv">
             <div class="mv_wrapper_1">
@@ -56,10 +24,7 @@
                     <h1>
                         観る人も、撮る人も、<br>みんなが夢中になれる場所
                     </h1>
-                    <p>
-                        映画製作を随時行っているほか、部員の見たい映画を持ち合って選んだ一本を鑑賞する上映会も毎月実施しています。
-                        <br>撮りたい人も見たい人もただ語りたい人も、映画についてそれぞれ自分なりの関わり方を持った人たちがお互いを尊重しながら交流するサークルです。
-                    </p>
+                    <p><?php echo get_post_meta( 1, 'mv_text', true ); ?></p>
                 </div>
 
             </div>
@@ -69,47 +34,43 @@
         <!-- サークル情報　ここから -->
         <section id="info">
             <div class="info_container">
-              <div class="info_contents">
-                <div class="info_title">
-                  <h2 class="info_h2">Information</h2>
-                  <p>サークル情報</p>
+                <div class="info_contents">
+                    <div class="info_title">
+                    <h2 class="info_h2">Information</h2>
+                    <p>サークル情報</p>
+                    </div>
+                    <div class="info_message">
+                    <table>
+                        <tr>
+                        <th>サークル名</th>
+                        <td><?php echo get_post_meta( 1, 'circle_name', true ); ?></td>
+                        </tr>
+                        <tr>
+                        <th>人数</th>
+                        <td><?php echo get_post_meta( 1, 'members', true ); ?></td>
+                        </tr>
+                        <tr>
+                        <th>代表</th>
+                        <td><?php echo get_post_meta( 1, 'representative_name', true ); ?></td>
+                        </tr>
+                        <tr>
+                        <th>設立</th>
+                        <td><?php echo get_post_meta( 1, 'establish_year', true ); ?></td>
+                        </tr>
+                        <tr>
+                        <th>新歓情報</th>
+                        <td><?php echo nl2br( get_post_meta( 1, 'welcom_party_info', true ) ); ?></td>
+                        </tr>
+                        <tr>
+                        <th>入金方法</th>
+                        <td><?php echo nl2br( get_post_meta( 1, 'whoto_payment', true ) ); ?></td>
+                        </tr>
+                    </table>
+                    </div>
                 </div>
-                <div class="info_message">
-                  <table>
-                    <tr>
-                      <th>サークル名</th>
-                      <td>CINEMAX SIDEVARG</td>
-                    </tr>
-                    <tr>
-                      <th>人数</th>
-                      <td>約20人</td>
-                    </tr>
-                    <tr>
-                      <th>代表</th>
-                      <td>山田太郎</td>
-                    </tr>
-                    <tr>
-                      <th>設立</th>
-                      <td>1975年</td>
-                    </tr>
-                    <tr>
-                      <th>新歓情報</th>
-                      <td>入会年中受付中<br />大学・学年問わず募集しています</td>
-                    </tr>
-                    <tr>
-                      <th>入金方法</th>
-                      <td>
-                        公式LINEから<br /><a href="https://www.url"
-                          >https://www.url</a
-                        >
-                      </td>
-                    </tr>
-                  </table>
+                <div class="info_images">
+                    <img src="<?php echo get_theme_file_uri('src/src/sidevarg5 1.png'); ?>" class="mv_cv_img" alt="" width="100%" height="100%" />
                 </div>
-              </div>
-              <div class="info_images">
-                <img src="<?php echo get_theme_file_uri('src/src/sidevarg5 1.png'); ?>" class="mv_cv_img" alt="" width="100%" height="100%" />
-              </div>
             </div>
         </section>
         <!-- サークル情報　ここまで -->
