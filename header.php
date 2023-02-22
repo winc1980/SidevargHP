@@ -17,3 +17,35 @@
         <?php wp_head(); ?>
     </head>
     <body>
+
+    <main>
+        <!-- ヘッダー　ここから -->
+        <section id="header">
+            <header>
+                <img class="header-logo" src="<?php echo get_theme_file_uri('src/logo.svg'); ?>" alt="" >
+                <h1 class="header-title">Waseda Cinema Circle</h1>
+                <nav class="header-nav">
+                    <ul class="header-menu">
+                        <li class="header-menu-item"><a href="#">Twitter</a></li>
+                        <li class="header-menu-item"><a href="#">Instagram</a></li>
+                        <li class="header-menu-item"><a href="#">Blog</a></li>
+                        <li class="header-menu-item"><a href="#" id="contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="hamburger-menu">
+                    <input type="checkbox" id="menu-btn-check">
+                    <label for="menu-btn-check" class="menu-btn"><span></span></label>
+                    <!-- ここからメニュー-->
+                    <div class="menu-content">
+                        <ul>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    <!--ここまでメニュー-->
+                    </div>
+                </div>
+            </header>
+        </section>
+        <!-- ヘッダー　ここまで -->
