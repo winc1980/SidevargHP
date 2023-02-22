@@ -112,6 +112,9 @@ img {
 /*-----------------------------------------------
 ヘッダー
 -----------------------------------------------*/
+#header {
+    z-index: 1000;
+}
 header {
     display: flex;
     width: 100%;
@@ -124,6 +127,8 @@ header {
 }
 
 .header-title {
+    font-family: "Economica";
+    padding-left: 25px;
     margin-right: auto;
     font-size: 90%;
     z-index: 1100;
@@ -145,7 +150,7 @@ header {
     width: 40px;
     justify-content: center;
     align-items: center;
-    z-index: 90;
+    z-index: 1000;
     background-color: #ffffff;
 }
 .menu-btn span,
@@ -184,6 +189,7 @@ header {
     background-color: #ffffff;
     padding: 70px 10px 0;
     text-align: center;
+    z-index: 950;
 }
 .menu-content ul {
     list-style: none;
@@ -215,8 +221,8 @@ header {
     position: fixed;
     top: -100%;/*topの値を変更してメニューを画面外へ*/
     right: 0%;
-    background-color: #3584bb;
-    transition: all 0.5s;/*アニメーション設定*/
+    transition: all 0.7s;/*アニメーション設定*/
+    z-index: 950;
 }
 #menu-btn-check:checked ~ .menu-content {
     top: -3%;/*メニューを画面内へ*/
@@ -528,10 +534,16 @@ header {
 .sidevarg-schedule h1 {
     text-align: center;
     margin-right: 3%;
+    font-family: "Economica";
+    font-size: 400%;
+    margin-bottom: 0%;
 }
 .sidevarg-schedule h2 {
     text-align: center;
-    margin-right: 3%;
+    margin-right: 4%;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 100%;
+    margin-bottom: 5%;
 }
 .sidevarg-schedule p {
     margin-right: 30%;
@@ -644,18 +656,21 @@ img{
         z-index: 1000;
     }
     .header-title {
+        font-family: "Economica";
         margin-right: 1%;
         font-size: 100%;
     }
     .header-logo {
         width: 45px;
         height: auto;
+        z-index: 1000;
     }
     .header-menu-item {
         list-style: none;
         display: inline-block;
         margin-right: 23px;
         padding: 10px;
+        z-index: 1000;
     }
     .header-nav {
         margin-right: 44px;
@@ -919,14 +934,30 @@ main {
         left: -100px;
     }
     .sidevarg-schedule h1 {
-        margin-right: 83%;
+        margin-right: 73%;
+        font-family: "Economica";
+        font-size: 400%;
+        margin-bottom: 0%;
+        margin-inline-start: 0%;
+        text-align: start;
+        margin-left: 41px;
+
     }
     .sidevarg-schedule h2 {
         margin-right: 84%;
+        font-family: "Noto Sans JP", sans-serif;
+        font-size: 90%;
+        margin-bottom: 5%;
+        margin-inline-start: 0%;
+        text-align: start;
+        margin-left: 41px;
     }
     .sidevarg-schedule p {
         margin-right: 84%;
         margin-inline-end: 60%;
+        margin-inline-start: 5%;
+        text-align: start;
+        margin-left: 41px;
     }
 
 /*-----------------------------------------------
