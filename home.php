@@ -2,31 +2,18 @@
 
         <!-- メインビジュアル　ここから -->
         <section id="mv">
-            <div class="mv_wrapper_1">
-                    <img src="<?php echo get_theme_file_uri('src/mv_cover1.png'); ?>" alt="" class="mv_cv_img1">
-
+            <div class="mv_wrapper_1 fade">
+                <img src="<?php echo get_theme_file_uri('src/mv_cover1.png'); ?>" alt="" class="mv_cv_img1" />
                 <div class="mv_contents_wrapper_1">
-                    <h1>
-                        人生にエイガを。
-                    </h1>
-                    <h2>
-                        CINEMAX<br>SIDEVARG
-                    </h2>
-
+                    <h1>人生にエイガを。</h1>
+                    <h2>CINEMAX<br />SIDEVARG</h2>
                 </div>
-
             </div>
-            <div class="mv_wrapper_2">
-
-                <img src="<?php echo get_theme_file_uri('src/mv_cover2.png'); ?>" class="mv_cv_img2" alt="">
-
+            <div class="mv_wrapper_2 fade">
                 <div class="mv_contents_wrapper_2">
-                    <h1>
-                        観る人も、撮る人も、<br>みんなが夢中になれる場所
-                    </h1>
+                    <h1>観る人も、撮る人も、<br />みんなが夢中になれる場所</h1>
                     <p><?php echo get_post_meta( 1, 'mv_text', true ); ?></p>
                 </div>
-
             </div>
         </section>
         <!-- メインビジュアル　ここまで -->
@@ -69,7 +56,7 @@
                     </div>
                 </div>
                 <div class="info_images">
-                    <img src="<?php echo get_theme_file_uri('src/src/sidevarg5 1.png'); ?>" class="mv_cv_img" alt="" width="100%" height="100%" />
+                    <img src="<?php echo get_theme_file_uri('src/sidevarg5 1.png'); ?>" class="mv_cv_img" alt="" width="100%" height="100%" />
                 </div>
             </div>
         </section>
