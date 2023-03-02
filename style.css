@@ -114,7 +114,7 @@ img {
 header {
   display: flex;
   width: 100%;
-  height: 45px;
+  height: 60px;
   padding-left: 2%;
   background-color: rgb(255, 255, 255);
   align-items: center;
@@ -301,32 +301,33 @@ header {
   font-style: normal;
   font-weight: 900;
   font-size: 50px;
-  line-height: 57px;
   letter-spacing: 0.3em;
   color: #ffffff;
 }
 
 .mv_wrapper_2 {
   position: relative;
-  background-color: #1d9ae3;
-  height: 70vh;
-  /* background-color: red; */
+  background: no-repeat url('src/mv_cover2.png');
+  background-size: cover;
+  background-position: center;
 }
-.mv_wrapper_2 .mv_cv_img2 {
-  width: 100%;
-  height: 70vh;
-  opacity: 23%;
+
+.mv_wrapper_2::before {
+  content: '';
   position: absolute;
-  object-fit: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(29, 154, 227, 78%);
+
 }
 
 .mv_contents_wrapper_2 {
   /* background-color: red; */
   margin: 0 auto;
   top: 5vh;
-  max-width: 40em;
-  padding: 5%;
-  position: relative;
+  padding: 18% 10px;
 }
 
 .mv_contents_wrapper_2 h1 {
@@ -336,12 +337,11 @@ header {
   position: relative;
   /* font-style: normal; */
   font-weight: 500;
-  font-size: 6vw;
-  line-height: 4rem;
+  font-size: 2.5rem;
   letter-spacing: 0.11em;
   color: #ffffff;
   text-align: center;
-  margin-bottom: 10%;
+  margin: 0 0 42px 0;
 }
 
 .mv_contents_wrapper_2 p {
@@ -353,9 +353,9 @@ header {
   width: 100%;
   font-style: normal;
   font-weight: 500;
-  font-size: 3.1vw;
-  line-height: 3.5rem;
-  letter-spacing: 0.11em;
+  font-size: 1.4rem;
+  letter-spacing: 0.11rem;
+  line-height: 3.8rem;
   color: #ffffff;
 }
 
@@ -794,7 +794,6 @@ PC表示
     header {
         display: flex;
         width: 100%;
-        height:58px;
         top: 0%;
         left: 0%;
         padding-left: 40px;
@@ -809,7 +808,7 @@ PC表示
         margin-left: -4px;
         margin-top: 10px;
         right: 100px;
-        font-size: 18px;
+        font-size: 19px;
         flex-shrink: 0;
     } 
     .header-logo {
@@ -818,29 +817,26 @@ PC表示
     }  
     .header-menu {
         display: flex;
-        padding-top: 19px;
-        padding-left: 0px;
-        margin-bottom: -26px;
+        align-items: center;
+        margin: 0;
     } 
     .header-menu-item {
         list-style: none;
         display: inline-block;
         margin-right: 23px;
-        margin-top: -33px;
-        padding: 10px;
-        z-index: 1000;
+        padding: 0 10px;
     } 
     .header-nav {
         margin-right: 20px;
-        margin-top: -４４px;
         display: flex;
     }
     .header-menu-item a {
         font-family: "Economica";
         letter-spacing: 3.8px;
+        font-weight: 700;
         text-decoration: none;
         color: #000000;
-        font-size: 15px;
+        font-size: 1.6rem;
         margin-top: -10px;
         margin-right: 10px;
         margin-left: 12px;
@@ -848,11 +844,8 @@ PC表示
     #contact {
         color: rgb(255, 255, 255);
         background-color: rgb(43, 142, 255);
-        display: block;
-        padding: 12px 31px 12px 31px;
-        margin-top: -6px;
-        margin-right: -4px;
-        left: 20px;
+        display: table-cell;
+        padding: 12px 31px;
     } 
     .hamburger-menu {
         display: none;
@@ -912,34 +905,18 @@ PC表示
     color: #ffffff;
   }
 
-  .mv_wrapper_2 {
-    position: relative;
-    background-color: #1d9ae3;
-    height: 70vh;
-  }
-
-  .mv_cv_img2 {
-    width: 100%;
-    height: 70vh;
-    opacity: 23%;
-    position: absolute;
-    object-fit: cover;
-  }
-
   .mv_contents_wrapper_2 {
     margin: 0 auto;
     top: 15vh;
-    max-width: 40em;
-    position: relative;
+    max-width: 600px;
+    padding: 8% 0;
   }
 
   .mv_contents_wrapper_2 h1 {
     position: relative;
-    margin: 0;
     font-style: normal;
     font-weight: 400;
-    font-size: 2vw;
-    line-height: 4rem;
+    font-size: 4.0rem;
     letter-spacing: 0.11em;
     color: #ffffff;
     text-align: center;
@@ -950,8 +927,7 @@ PC表示
     width: 100%;
     font-style: normal;
     font-weight: 400;
-    font-size: 1vw;
-    line-height: 2.5rem;
+    line-height: 40px;
     letter-spacing: 0.11em;
     color: #ffffff;
   }
