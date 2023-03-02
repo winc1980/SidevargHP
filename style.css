@@ -109,7 +109,7 @@ img {
 ヘッダー
 -----------------------------------------------*/
 #header {
-    z-index: 1000;
+  z-index: 1000;
 }
 header {
   display: flex;
@@ -122,21 +122,20 @@ header {
   z-index: 1000;
 }
 .header_wrapper {
-    display: flex;
-    background-color: #FFFFFF;
-    position: relative;
-    z-index: 980;
-    width: 100%;
-
+  display: flex;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 980;
+  width: 100%;
 }
 .header-title {
-    font-family: "Economica";
-    letter-spacing: 2px;
-    padding-left: 15px;
-    height: 10px;
-    margin-right: auto;
-    font-size: 90%;
-    z-index: 1100;
+  font-family: "Economica";
+  letter-spacing: 2px;
+  padding-left: 15px;
+  height: 10px;
+  margin-right: auto;
+  font-size: 90%;
+  z-index: 1100;
 }
 .header-logo {
   width: 45px;
@@ -147,16 +146,16 @@ header {
   display: none;
 }
 .menu-btn {
-    position: fixed;
-    top: 2px;
-    right: 10px;
-    display: flex;
-    height: 40px;
-    width: 40px;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    background-color: #ffffff;
+  position: fixed;
+  top: 2px;
+  right: 10px;
+  display: flex;
+  height: 40px;
+  width: 40px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  background-color: #ffffff;
 }
 .menu-btn span,
 .menu-btn span:before,
@@ -196,26 +195,26 @@ header {
   display: none;
 }
 .menu-content ul {
-    background-color: #ffffff;
-    padding: 70px 10px 0;
-    text-align: center;
-    z-index: 950;
+  background-color: #ffffff;
+  padding: 70px 10px 0;
+  text-align: center;
+  z-index: 950;
 }
 .menu-content ul {
   list-style: none;
 }
 .menu-content ul li a {
-    font-family: "Economica";
-    letter-spacing: 3.8px;
-    font-size: 15px;
-    display: inline-block;
-    width: 100%;
-    font-size: 15px;
-    box-sizing: border-box;
-    color:#000000;
-    text-decoration: none;
-    padding: 16px 30% 16px 30%;
-    position: relative;
+  font-family: "Economica";
+  letter-spacing: 3.8px;
+  font-size: 15px;
+  display: inline-block;
+  width: 100%;
+  font-size: 15px;
+  box-sizing: border-box;
+  color: #000000;
+  text-decoration: none;
+  padding: 16px 30% 16px 30%;
+  position: relative;
 }
 .menu-content ul li a::before {
   width: 7px;
@@ -229,13 +228,13 @@ header {
 }
 
 .menu-content {
-    width: 100%;
-    height: 0%;
-    position: fixed;
-    top: -100%;/*topの値を変更してメニューを画面外へ*/
-    right: 0%;
-    transition: all 0.7s;/*アニメーション設定*/
-    z-index: 950;
+  width: 100%;
+  height: 0%;
+  position: fixed;
+  top: -100%; /*topの値を変更してメニューを画面外へ*/
+  right: 0%;
+  transition: all 0.7s; /*アニメーション設定*/
+  z-index: 950;
 }
 #menu-btn-check:checked ~ .menu-content {
   top: -3%; /*メニューを画面内へ*/
@@ -307,20 +306,19 @@ header {
 
 .mv_wrapper_2 {
   position: relative;
-  background: no-repeat url('src/mv_cover2.png');
+  background: no-repeat url("src/mv_cover2.png");
   background-size: cover;
   background-position: center;
 }
 
 .mv_wrapper_2::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background-color: rgba(29, 154, 227, 78%);
-
 }
 
 .mv_contents_wrapper_2 {
@@ -658,33 +656,33 @@ table {
 活動日程
 -----------------------------------------------*/
 .sidevarg-schedule {
-    background: #F7F7F7;
-    padding-top: 20%;
-    padding-bottom: 10%;
-    margin-right: 5%;
+  background: #f7f7f7;
+  padding-top: 20%;
+  padding-bottom: 10%;
+  margin-right: 5%;
 }
 .sidevarg-schedule h1 {
-    margin-top: -25px;
-    letter-spacing: 4px;
-    text-align: center;
-    font-family: "Economica";
-    font-size: 51px;
-    margin-bottom: 0%;
+  margin-top: -25px;
+  letter-spacing: 4px;
+  text-align: center;
+  font-family: "Economica";
+  font-size: 51px;
+  margin-bottom: 0%;
 }
 .sidevarg-schedule h2 {
-    text-align: center;
-    margin-top: 5px;
-    letter-spacing: 2px;
-    font-family: "Noto Sans JP", sans-serif;
-    font-size: 17px;
-    margin-bottom: 5%;
+  text-align: center;
+  margin-top: 5px;
+  letter-spacing: 2px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 17px;
+  margin-bottom: 5%;
 }
 .sidevarg-schedule p {
-    margin-right: 30%;
-    letter-spacing: 2px;
-    margin-inline-start: 9%;
-    margin-inline-end: 9%;
-    font-size: 13px;
+  margin-right: 30%;
+  letter-spacing: 2px;
+  margin-inline-start: 9%;
+  margin-inline-end: 9%;
+  font-size: 13px;
 }
 /*-----------------------------------------------
 活動場所
@@ -764,6 +762,57 @@ table {
 フッター
 -----------------------------------------------*/
 
+.footer_wrapper {
+  position: relative;
+  height: 55.8rem;
+}
+
+.footer_contact {
+  position: absolute;
+  height: 23.4rem;
+  top: 8rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  margin: auto;
+  z-index: 100;
+
+  background-color: #2e98d2;
+}
+
+.footer_contact p {
+  color: #fff;
+  text-align: center;
+  margin: 4.5rem 3rem 0em 3rem;
+}
+
+.contact-btn {
+  background-color: #fff;
+  width: 15.4rem;
+  height: 5.4rem;
+  margin: auto;
+}
+
+.contact-btn p {
+  color: #000;
+  padding: 1.6rem;
+  font-family: "Economica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  letter-spacing: 0.2em;
+  margin-top: 2rem;
+}
+
+.footer_link {
+  position: relative;
+  height: 36.1rem;
+  width: 100%;
+  top: 19.7rem;
+  background-color: #202020;
+  z-index: 50;
+}
+
 /*----------------------------------------------------------------------------------------------
 PC表示
 ----------------------------------------------------------------------------------------------*/
@@ -791,66 +840,66 @@ PC表示
   /*-----------------------------------------------
 ヘッダー
 -----------------------------------------------*/
-    header {
-        display: flex;
-        width: 100%;
-        top: 0%;
-        left: 0%;
-        padding-left: 40px;
-        background-color: rgb(255, 255, 255);
-        align-items: center;
-        position: fixed;
-        z-index: 1000;
-    } 
-    .header-title {
-        font-family: "Economica";
-        letter-spacing: 3px;
-        margin-left: -4px;
-        margin-top: 10px;
-        right: 100px;
-        font-size: 19px;
-        flex-shrink: 0;
-    } 
-    .header-logo {
-        margin-left: 20px;
-        z-index: 1000;
-    }  
-    .header-menu {
-        display: flex;
-        align-items: center;
-        margin: 0;
-    } 
-    .header-menu-item {
-        list-style: none;
-        display: inline-block;
-        margin-right: 23px;
-        padding: 0 10px;
-    } 
-    .header-nav {
-        margin-right: 20px;
-        display: flex;
-    }
-    .header-menu-item a {
-        font-family: "Economica";
-        letter-spacing: 3.8px;
-        font-weight: 700;
-        text-decoration: none;
-        color: #000000;
-        font-size: 1.6rem;
-        margin-top: -10px;
-        margin-right: 10px;
-        margin-left: 12px;
-    }
-    #contact {
-        color: rgb(255, 255, 255);
-        background-color: rgb(43, 142, 255);
-        display: table-cell;
-        padding: 12px 31px;
-    } 
-    .hamburger-menu {
-        display: none;
-    }
-/*-----------------------------------------------
+  header {
+    display: flex;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    padding-left: 40px;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+  }
+  .header-title {
+    font-family: "Economica";
+    letter-spacing: 3px;
+    margin-left: -4px;
+    margin-top: 10px;
+    right: 100px;
+    font-size: 19px;
+    flex-shrink: 0;
+  }
+  .header-logo {
+    margin-left: 20px;
+    z-index: 1000;
+  }
+  .header-menu {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+  .header-menu-item {
+    list-style: none;
+    display: inline-block;
+    margin-right: 23px;
+    padding: 0 10px;
+  }
+  .header-nav {
+    margin-right: 20px;
+    display: flex;
+  }
+  .header-menu-item a {
+    font-family: "Economica";
+    letter-spacing: 3.8px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.6rem;
+    margin-top: -10px;
+    margin-right: 10px;
+    margin-left: 12px;
+  }
+  #contact {
+    color: rgb(255, 255, 255);
+    background-color: rgb(43, 142, 255);
+    display: table-cell;
+    padding: 12px 31px;
+  }
+  .hamburger-menu {
+    display: none;
+  }
+  /*-----------------------------------------------
 メインビジュアル
 -----------------------------------------------*/
   main {
@@ -916,7 +965,7 @@ PC表示
     position: relative;
     font-style: normal;
     font-weight: 400;
-    font-size: 4.0rem;
+    font-size: 4rem;
     letter-spacing: 0.11em;
     color: #ffffff;
     text-align: center;
@@ -1068,41 +1117,40 @@ PC表示
   /*-----------------------------------------------
 活動日程
 -----------------------------------------------*/
-    .sidevarg-schedule {
-        background: #F7F7F7;
-        padding-top: 90px;
-        padding-bottom: 142px;
-        right: 150px;
-        left: -100px;
-    }
-    .sidevarg-schedule h1 {
-        font-family: "Economica";
-        letter-spacing: 6px;
-        font-size: 381%;
-        margin-bottom: 0%;
-        margin-inline-start: 0%;
-        text-align: start;
-        margin-left: 83px;
-
-    }
-    .sidevarg-schedule h2 {
-        letter-spacing: 1px;
-        font-family: "Noto Sans JP", sans-serif;
-        font-size: 150%;
-        margin-top: 8px;
-        margin-bottom: 45px;
-        margin-inline-start: 0%;
-        text-align: start;
-        margin-left: 83px;
-    }
-    .sidevarg-schedule p {
-        letter-spacing: 4px;
-        font-size: 16px;
-        margin-inline-end:53%;
-        margin-inline-start: 5%;
-        text-align: start;
-        margin-left: 83px;
-    }
+  .sidevarg-schedule {
+    background: #f7f7f7;
+    padding-top: 90px;
+    padding-bottom: 142px;
+    right: 150px;
+    left: -100px;
+  }
+  .sidevarg-schedule h1 {
+    font-family: "Economica";
+    letter-spacing: 6px;
+    font-size: 381%;
+    margin-bottom: 0%;
+    margin-inline-start: 0%;
+    text-align: start;
+    margin-left: 83px;
+  }
+  .sidevarg-schedule h2 {
+    letter-spacing: 1px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 150%;
+    margin-top: 8px;
+    margin-bottom: 45px;
+    margin-inline-start: 0%;
+    text-align: start;
+    margin-left: 83px;
+  }
+  .sidevarg-schedule p {
+    letter-spacing: 4px;
+    font-size: 16px;
+    margin-inline-end: 53%;
+    margin-inline-start: 5%;
+    text-align: start;
+    margin-left: 83px;
+  }
 
   /*-----------------------------------------------
 活動場所
