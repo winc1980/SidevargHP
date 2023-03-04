@@ -130,11 +130,13 @@ header {
 }
 .header-title {
   font-family: "Economica";
+  font-style: normal;
   letter-spacing: 2px;
   padding-left: 15px;
   height: 10px;
   margin-right: auto;
-  font-size: 90%;
+  font-size: 1.6rem;
+  font-weight: 700;
   z-index: 1100;
 }
 .header-logo {
@@ -145,9 +147,11 @@ header {
 .header-nav {
   display: none;
 }
+
 .menu-btn {
+  margin: 0 auto;
   position: fixed;
-  top: 2px;
+  top: 10px;
   right: 10px;
   display: flex;
   height: 40px;
@@ -156,6 +160,7 @@ header {
   align-items: center;
   z-index: 1000;
   background-color: #ffffff;
+  cursor: pointer;
 }
 .menu-btn span,
 .menu-btn span:before,
@@ -206,10 +211,10 @@ header {
 .menu-content ul li a {
   font-family: "Economica";
   letter-spacing: 3.8px;
+  font-weight: 700;
   font-size: 15px;
   display: inline-block;
   width: 100%;
-  font-size: 15px;
   box-sizing: border-box;
   color: #000000;
   text-decoration: none;
@@ -431,6 +436,7 @@ table {
 .info_message table th {
   width: 50%;
   padding-left: 1.4rem;
+  font-size: 1.2rem;
 }
 
 /* infoの行の間隔 */
@@ -441,10 +447,10 @@ table {
 }
 
 .info_images {
-  margin: 0 auto;
-  width: 90%;
+  /* margin: 0; */
+  width: 95%;
   height: 150%;
-  box-shadow: 10px 10px 4px #ccc;
+  box-shadow: 15px 15px 0px #d9d9d9;
   margin-bottom: 10%;
   /* box-shadow: 10px 10px 4px #ccc; */
 }
@@ -941,7 +947,7 @@ PC表示
     width: 100%;
     top: 0%;
     left: 0%;
-    padding-left: 40px;
+    margin: 0 auto;
     background-color: rgb(255, 255, 255);
     align-items: center;
     position: fixed;
@@ -968,11 +974,11 @@ PC表示
   .header-menu-item {
     list-style: none;
     display: inline-block;
-    margin-right: 23px;
-    padding: 0 10px;
+    margin-right: 20px;
+    /* padding: 0 0.3rem; */
   }
   .header-nav {
-    margin-right: 20px;
+    margin-right: 70px;
     display: flex;
   }
   .header-menu-item a {
@@ -983,13 +989,18 @@ PC表示
     color: #000000;
     font-size: 1.6rem;
     margin-top: -10px;
-    margin-right: 10px;
-    margin-left: 12px;
+    /* margin-right: 1%;
+    margin-left: 3%; */
   }
+  .header-menu-item a:hover {
+    opacity: 0.3;
+  }
+
   #contact {
     color: rgb(255, 255, 255);
     background-color: rgb(43, 142, 255);
     display: table-cell;
+    margin-right: 40px;
     padding: 12px 31px;
   }
   .hamburger-menu {
@@ -1089,6 +1100,7 @@ PC表示
     margin-right: 10%;
   }
   .info_container {
+    margin: 0 auto;
     flex-wrap: wrap-reverse;
     display: flex;
     align-items: center;
@@ -1105,13 +1117,14 @@ PC表示
   }
   .info_h2 {
     font-family: "Economica";
-    font-size: 3.5rem;
+    font-size: 5rem;
+    font-weight: 700;
     /* margin: 0 0  0; */
   }
 
   .info_title p {
     font-weight: 500;
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 
   /* #info .contents h2, */
@@ -1147,18 +1160,20 @@ PC表示
   .info_message table th {
     width: 35%;
     padding-left: 0.7rem;
+    font-size: 1.4rem;
   }
 
   /* infoの行の間隔 */
   .info_message table tr td {
     padding-top: 20px;
     padding-bottom: 20px;
+    font-size: 1.4rem;
   }
 
   .info_images {
     width: 50%;
     height: 150%;
-    box-shadow: 1.4rem 1.4rem 0.7rem #ccc;
+    box-shadow: 1.8rem 1.8rem 0em #f7f7f7;
     /* box-shadow: 10px 10px 4px #ccc; */
   }
   /* .info_images img {
