@@ -444,7 +444,7 @@ table {
   margin: 0 auto;
   width: 90%;
   height: 150%;
-  box-shadow: 10px 10px 4px #ccc;
+  box-shadow: 15px 15px 6px #f7f7f7;
   margin-bottom: 10%;
   /* box-shadow: 10px 10px 4px #ccc; */
 }
@@ -1062,7 +1062,7 @@ PC表示
   .info_images {
     width: 50%;
     height: 150%;
-    box-shadow: 1.4rem 1.4rem 0.7rem #ccc;
+    box-shadow: 1.8rem 1.8rem 0.7rem #f7f7f7;
     /* box-shadow: 10px 10px 4px #ccc; */
   }
   /* .info_images img {
