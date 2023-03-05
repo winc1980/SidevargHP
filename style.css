@@ -130,11 +130,13 @@ header {
 }
 .header-title {
   font-family: "Economica";
+  font-style: normal;
   letter-spacing: 2px;
   padding-left: 15px;
   height: 10px;
   margin-right: auto;
-  font-size: 90%;
+  font-size: 1.6rem;
+  font-weight: 700;
   z-index: 1100;
 }
 .header-logo {
@@ -145,9 +147,11 @@ header {
 .header-nav {
   display: none;
 }
+
 .menu-btn {
+  margin: 0 auto;
   position: fixed;
-  top: 2px;
+  top: 10px;
   right: 10px;
   display: flex;
   height: 40px;
@@ -156,6 +160,7 @@ header {
   align-items: center;
   z-index: 1000;
   background-color: #ffffff;
+  cursor: pointer;
 }
 .menu-btn span,
 .menu-btn span:before,
@@ -206,10 +211,10 @@ header {
 .menu-content ul li a {
   font-family: "Economica";
   letter-spacing: 3.8px;
+  font-weight: 700;
   font-size: 15px;
   display: inline-block;
   width: 100%;
-  font-size: 15px;
   box-sizing: border-box;
   color: #000000;
   text-decoration: none;
@@ -248,13 +253,13 @@ header {
 .mv_wrapper_1 {
   position: relative;
   width: 100%;
-  height: 91vh;
+  height: 100vh;
 }
 
 .mv_cv_img1 {
   display: inline;
   width: 100%;
-  height: 91vh;
+  height: 100%;
   filter: brightness(45%);
   position: absolute;
   object-fit: cover;
@@ -431,6 +436,7 @@ table {
 .info_message table th {
   width: 50%;
   padding-left: 1.4rem;
+  font-size: 1.2rem;
 }
 
 /* infoの行の間隔 */
@@ -441,10 +447,10 @@ table {
 }
 
 .info_images {
-  margin: 0 auto;
-  width: 90%;
+  /* margin: 0; */
+  width: 95%;
   height: 150%;
-  box-shadow: 10px 10px 4px #ccc;
+  box-shadow: 15px 15px 0px #d9d9d9;
   margin-bottom: 10%;
   /* box-shadow: 10px 10px 4px #ccc; */
 }
@@ -455,7 +461,103 @@ table {
 /*-----------------------------------------------
 ブログ一覧
 -----------------------------------------------*/
+.blogichiran_txt1 {
+    width: 7.1rem;
+    height: 4.6rem;
 
+
+    font-family: 'Economica';
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 4.6rem;
+    margin: 0 15.2rem 1rem 15.2rem;
+}
+
+.blogichiran_txt2{
+    width: 4.8rem;
+    height: 2.2rem;
+
+    font-family: 'Noto Sans JP';
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    margin: 0 15.2rem 1rem 15.2rem;
+}
+
+.blogichiran_box1 {
+    /* background-color: #F7F7F7;
+    width: 34.5rem;
+    height: 24rem;
+
+    display: grid;
+*/
+display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
+    width: 34.5rem;
+    height: 24rem;
+    background-color: #F7F7F7;
+}
+
+ 
+
+    .blogichiran_box1 .blogichiran_div1 {
+        font-family: 'Courier New', Courier, monospace;
+        /* grid-row: 1 / 2;
+        grid-column: 1 / 3; */
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 3; 
+        /* font-weight: 700;
+        font-size: 1.4rem;
+        line-height: 1.6rem; */
+        
+        }
+     .blogichiran_box1 .blogichiran_div2 {
+        /* grid-row: 2 / 3;
+        grid-column: 1 / 3; */
+            grid-row: 2;
+            grid-row-end: 3; 
+            grid-column-start: 1;
+            grid-column-end: 3;
+            /* width: 31.5rem;
+            height: 3.2rem;
+            left: 3rem;
+            top: 217.4rem; */
+            font-family: 'Economics';     
+     }
+
+     .blogichiran_box1 .blogichiran_div3 {
+        /* grid-row: 1 / 2;
+        grid-column: 3 / 6; */
+
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 6; 
+        /* margin: 20px 10px;
+        width: 14.9rem;
+        height: 8.2rem; */
+    }
+    .blogichiran_box1 .blogichiran_div4 {
+       /*  grid-row: 2 / 3;
+        grid-column: 3 / 6; */
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 6; 
+       /*  margin: 20px 20px;
+        width: 14.6rem;
+        height: 5.2rem;
+        left: 19.9rem;
+        top: 222.6rem; */
+
+        font-family: 'Economica';
+    }
+    
+    
 /*-----------------------------------------------
 ブログ（バックエンド）
 -----------------------------------------------*/
@@ -929,7 +1031,7 @@ PC表示
     width: 100%;
     top: 0%;
     left: 0%;
-    padding-left: 40px;
+    margin: 0 auto;
     background-color: rgb(255, 255, 255);
     align-items: center;
     position: fixed;
@@ -956,11 +1058,11 @@ PC表示
   .header-menu-item {
     list-style: none;
     display: inline-block;
-    margin-right: 23px;
-    padding: 0 10px;
+    margin-right: 20px;
+    /* padding: 0 0.3rem; */
   }
   .header-nav {
-    margin-right: 20px;
+    margin-right: 70px;
     display: flex;
   }
   .header-menu-item a {
@@ -971,13 +1073,18 @@ PC表示
     color: #000000;
     font-size: 1.6rem;
     margin-top: -10px;
-    margin-right: 10px;
-    margin-left: 12px;
+    /* margin-right: 1%;
+    margin-left: 3%; */
   }
+  .header-menu-item a:hover {
+    opacity: 0.3;
+  }
+
   #contact {
     color: rgb(255, 255, 255);
     background-color: rgb(43, 142, 255);
     display: table-cell;
+    margin-right: 40px;
     padding: 12px 31px;
   }
   .hamburger-menu {
@@ -986,22 +1093,9 @@ PC表示
   /*-----------------------------------------------
 メインビジュアル
 -----------------------------------------------*/
-  main {
-  }
-
-  #mv {
-  }
-
-  .mv_wrapper_1 {
-    position: relative;
-    width: 100%;
-    height: 91vh;
-  }
-
   .mv_cv_img1 {
     display: inline;
     width: 100%;
-    height: 91vh;
     filter: brightness(45%);
     position: absolute;
     object-fit: cover;
@@ -1077,6 +1171,7 @@ PC表示
     margin-right: 10%;
   }
   .info_container {
+    margin: 0 auto;
     flex-wrap: wrap-reverse;
     display: flex;
     align-items: center;
@@ -1093,13 +1188,14 @@ PC表示
   }
   .info_h2 {
     font-family: "Economica";
-    font-size: 3.5rem;
+    font-size: 5rem;
+    font-weight: 700;
     /* margin: 0 0  0; */
   }
 
   .info_title p {
     font-weight: 500;
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 
   /* #info .contents h2, */
@@ -1135,18 +1231,20 @@ PC表示
   .info_message table th {
     width: 35%;
     padding-left: 0.7rem;
+    font-size: 1.4rem;
   }
 
   /* infoの行の間隔 */
   .info_message table tr td {
     padding-top: 20px;
     padding-bottom: 20px;
+    font-size: 1.4rem;
   }
 
   .info_images {
     width: 50%;
     height: 150%;
-    box-shadow: 1.4rem 1.4rem 0.7rem #ccc;
+    box-shadow: 1.8rem 1.8rem 0em #f7f7f7;
     /* box-shadow: 10px 10px 4px #ccc; */
   }
   /* .info_images img {
@@ -1167,6 +1265,7 @@ PC表示
 ブログ一覧
 
 -----------------------------------------------*/
+
 
   /*-----------------------------------------------
 ブログ（バックエンド）
