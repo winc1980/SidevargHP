@@ -402,7 +402,8 @@ header {
   font-family: "Noto Sans JP";
   font-style: normal;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
 }
 .info_contents p,
 table {
@@ -765,26 +766,32 @@ table {
 }
 .sidevarg-schedule h1 {
   margin-top: -25px;
-  letter-spacing: 4px;
+  letter-spacing: 0.1em;
   text-align: center;
   font-family: "Economica";
-  font-size: 51px;
-  margin-bottom: 0%;
+  font-size: 4rem;
+  margin-bottom: 0;
 }
 .sidevarg-schedule h2 {
   text-align: center;
   margin-top: 5px;
   letter-spacing: 2px;
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 17px;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  font-weight: 500;
+  font-style: normal;
   margin-bottom: 5%;
 }
 .sidevarg-schedule p {
   margin-right: 30%;
-  letter-spacing: 2px;
+  letter-spacing: 0.2em;
   margin-inline-start: 9%;
   margin-inline-end: 9%;
-  font-size: 13px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  line-height: 2.4rem;
 }
 /*-----------------------------------------------
 活動場所
@@ -803,25 +810,38 @@ table {
 .place_h2 {
   font-family: "Economica";
   font-style: normal;
-  font-size: 4.5rem;
+  font-size: 4rem;
+  font-weight: 700;
   margin: 0 0 7px 0;
   letter-spacing: 0.1em;
-  /* line-height: 20%; */
-  font-weight: 100;
 }
 .place_title p {
   font-weight: 500;
   font-size: 1.5rem;
+  letter-spacing: 0.1em;
+}
+
+.place_message p {
+  margin-top: 3rem;
+  margin-bottom: 2.5rem;
+  text-align: left;
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.2em;
 }
 /* .place_h2 {
   margin: 0;
   font-family: "Economica";
 } */
 .place_btn {
-  font-size: 1.2rem;
-  /* font-weight: 00; */
+  font-size: 1.4rem;
+  font-weight: 700;
   width: 100%;
-  /* line-height: 1.5; */
+  line-height: 1.7;
+  letter-spacing: 0.2em;
   position: relative;
   display: inline-block;
   padding: 1rem 2rem;
@@ -890,6 +910,7 @@ table {
   font-weight: 400;
   font-size: 1.2rem;
   line-height: 2rem;
+  letter-spacing: 0.1em;
 }
 
 .contact-btn {
@@ -1322,30 +1343,34 @@ PC表示
   }
   .sidevarg-schedule h1 {
     font-family: "Economica";
-    letter-spacing: 6px;
-    font-size: 381%;
+    letter-spacing: 0.1em;
+    font-size: 5rem;
+    font-weight: 700;
     margin-bottom: 0%;
     margin-inline-start: 0%;
     text-align: start;
-    margin-left: 83px;
+    margin-left: 8.3rem;
   }
   .sidevarg-schedule h2 {
-    letter-spacing: 1px;
+    letter-spacing: 0.1em;
     font-family: "Noto Sans JP", sans-serif;
-    font-size: 150%;
-    margin-top: 8px;
-    margin-bottom: 45px;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 0.8rem;
+    margin-bottom: 4.5rem;
     margin-inline-start: 0%;
     text-align: start;
-    margin-left: 83px;
+    margin-left: 8.3rem;
   }
   .sidevarg-schedule p {
-    letter-spacing: 4px;
-    font-size: 16px;
+    letter-spacing: 0.2em;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.8rem;
     margin-inline-end: 53%;
     margin-inline-start: 5%;
     text-align: start;
-    margin-left: 83px;
+    margin-left: 8.3rem;
   }
 
   /*-----------------------------------------------
@@ -1363,11 +1388,17 @@ PC表示
   }
   .place_title p {
     font-size: 2rem;
+    font-weight: 500;
+  }
+  .place_message p {
+    margin: 4rem 0;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
   }
   .place_h2 {
     margin: 0;
-    font-family: "Economica";
     font-weight: 700;
+    font-size: 5rem;
   }
   .place_btn {
     font-size: 1.2rem;
@@ -1446,9 +1477,13 @@ PC表示
     margin: auto;
   }
 
+  .contact-btn:hover {
+    opacity: 0.5;
+  }
+
   .contact-btn p {
     color: #000;
-    padding: 1.6rem;
+    padding: 1.9rem;
     font-family: "Economica";
     font-style: normal;
     font-weight: 700;
@@ -1491,6 +1526,10 @@ PC表示
     margin: 0.6rem 0 0.6rem 2rem;
     width: initial;
     margin-left: 5rem;
+  }
+
+  .footer_link ul li:hover {
+    opacity: 0.6;
   }
 
   .footer_link a {
