@@ -783,9 +783,15 @@ table {
   color: #fff;
   text-align: center;
   margin: 4.5rem 3rem 0em 3rem;
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 2rem;
 }
 
 .contact-btn {
+  display: block;
   background-color: #fff;
   width: 15.4rem;
   height: 5.4rem;
@@ -801,7 +807,7 @@ table {
   font-size: 1.4rem;
   line-height: 2.2rem;
   letter-spacing: 0.2em;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .footer_link {
@@ -811,6 +817,84 @@ table {
   top: 19.7rem;
   background-color: #202020;
   z-index: 50;
+}
+
+.footer_link nav {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 28rem;
+  margin: 0 auto;
+  top: 16rem;
+}
+
+.footer_link ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding-inline-start: 0;
+  width: 28rem;
+  margin: 0 auto;
+  order: 1;
+}
+
+.footer_link ul li {
+  display: flex;
+  margin: 0.6rem 0 0.6rem 2rem;
+  width: 12rem;
+}
+
+.footer_link a {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.footer_link img {
+  width: 1.4rem;
+  margin: 0 1.6rem 0 0;
+}
+
+#footer_logo {
+  position: relative;
+  width: 8.1rem;
+  height: 4rem;
+  top: 3rem;
+  margin: 0 auto;
+  font-family: "Economica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.7rem;
+  line-height: 2rem;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  order: 2;
+}
+
+.footer_copyright {
+  position: relative;
+  width: 100%;
+  top: 23rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.footer_copyright p {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  letter-spacing: 0.2em;
+  color: #FFFFFF;
 }
 
 /*----------------------------------------------------------------------------------------------
@@ -1214,4 +1298,138 @@ PC表示
   /*-----------------------------------------------
 フッター
 -----------------------------------------------*/
+.footer_wrapper {
+  position: relative;
+  height: 55.8rem;
+}
+
+.footer_contact {
+  position: absolute;
+  height: 23.4rem;
+  top: 8rem;
+  left: 12rem;
+  right: 12rem;
+  margin: auto;
+  z-index: 100;
+
+  background-color: #2e98d2;
+}
+
+.footer_contact p {
+  color: #fff;
+  text-align: center;
+  margin: 4.5rem 3rem 0em 3rem;
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+}
+
+.contact-btn {
+  display: block;
+  background-color: #fff;
+  width: 31rem;
+  height: 5.9rem;
+  margin: auto;
+}
+
+.contact-btn p {
+  color: #000;
+  padding: 1.6rem;
+  font-family: "Economica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.2rem;
+  letter-spacing: 0.2em;
+  margin-top: 3rem;
+}
+
+.footer_link {
+  position: relative;
+  height: 36.1rem;
+  width: 100%;
+  top: 19.7rem;
+  background-color: #202020;
+  z-index: 50;
+}
+
+.footer_link nav {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  top: 23rem;
+}
+
+.footer_link ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding-inline-start: 0;
+  width: initial;
+  margin: 0 auto;
+  order: 2;
+}
+
+.footer_link ul li {
+  display: flex;
+  margin: 0.6rem 0 0.6rem 2rem;
+  width: initial;
+  margin-left: 5rem;
+}
+
+.footer_link a {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.footer_link img {
+  width: 2.3rem;
+  margin: 0 1.6rem 0 0;
+}
+
+#footer_logo {
+  position: relative;
+  width: 8.1rem;
+  height: 4rem;
+  top: 0;
+  margin: 0 auto;
+  font-family: "Economica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  order: 1;
+}
+
+.footer_copyright {
+  position: relative;
+  width: 100%;
+  top: 28rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.footer_copyright p {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.73rem;
+  letter-spacing: 0.2em;
+  color: #FFFFFF;
 }
