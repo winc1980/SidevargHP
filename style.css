@@ -330,7 +330,7 @@ header {
   /* background-color: red; */
   margin: 0 auto;
   top: 5vh;
-  padding: 18% 10px;
+  padding: 18% 1.5rem;
 }
 
 .mv_contents_wrapper_2 h1 {
@@ -369,7 +369,6 @@ header {
   width: 100%;
   background: white;
   margin-bottom: 10%;
-  margin-top: 10%;
 }
 .info_container {
   max-width: 1320px;
@@ -410,7 +409,7 @@ table {
   color: rgb(21, 20, 20);
 }
 .info_message {
-  padding: 10%;
+  padding: 10% 0 0 5%;
 }
 
 .info_message div {
@@ -435,13 +434,20 @@ table {
 }
 
 .info_message table th {
-  width: 50%;
-  padding-left: 1.4rem;
+  width: 10rem;
+  padding: 2rem 0 2rem 1.4rem;
   font-size: 1.2rem;
+  display: block;
 }
 
 /* infoの行の間隔 */
 .info_message table tr td {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.info_message a {
   padding-top: 20px;
   padding-bottom: 20px;
   font-size: 1.2rem;
@@ -1047,15 +1053,11 @@ PC表示
 ヘッダー
 -----------------------------------------------*/
   header {
-    display: flex;
-    width: 100%;
     top: 0%;
     left: 0%;
     margin: 0 auto;
-    background-color: rgb(255, 255, 255);
     align-items: center;
-    position: fixed;
-    z-index: 1000;
+    position: sticky;
   }
   .header-title {
     font-family: "Economica";
@@ -1187,6 +1189,7 @@ PC表示
     width: 100%;
     background: white;
     /* padding: 60px 0; */
+    margin-top: 10%;
     margin-bottom: 10%;
     margin-right: 10%;
   }
@@ -1249,7 +1252,6 @@ PC表示
   }
 
   .info_message table th {
-    width: 35%;
     padding-left: 0.7rem;
     font-size: 1.4rem;
   }
