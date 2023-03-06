@@ -460,6 +460,13 @@ table {
   padding-top: 20px;
   padding-bottom: 20px;
   font-size: 1.2rem;
+  color: #000;
+  transition: .3s all;
+  text-decoration: underline;
+}
+.info_message a:hover {
+  opacity: .6;
+  transition: .3s all;
 }
 
 .info_images {
@@ -911,10 +918,6 @@ table {
   background: transparent;
   border: 2px solid #000000;
 }
-.place_btn:hover {
-  /* opacity: 0.2; */
-  background: rgba(0, 0, 0, 0.4);
-}
 #place #button {
   /* background-color: #3A5199; */
   /* display: flex; */
@@ -1113,9 +1116,16 @@ PC表示
     right: 100px;
     font-size: 19px;
     flex-shrink: 0;
+    transition: .3s all;
   }
   .header-logo {
     margin-left: 20px;
+    transition: .3s all;
+  }
+  .header-title:hover,.header-logo:hover {
+    cursor: pointer;
+    color: #2E98D2;
+    transition: .3s all;
   }
   .header-menu {
     display: flex;
@@ -1142,17 +1152,38 @@ PC表示
     margin-top: -10px;
     margin-left: 3%; 
     margin-right: 47px;
+    transition: .3s all;
   }
   .header-menu-item a:hover {
-    opacity: 0.3;
+    color: #2E98D2;
+    transition: .3s all;
   }
 
   #contact {
+    width: 128px;
+    height: 43px;
     color: rgb(255, 255, 255);
-    background: #2e98d2;
+    background-color: #2E98D2;
     display: table-cell;
     margin-right: 0px;
-    padding: 12px 31px;
+    line-height: 43px;
+    box-sizing: border-box;
+    transition: .3s all;
+    position: relative;
+  }
+  #contact span {
+    font-family: "Economica";
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    left: 50%;
+  }
+  #contact:hover {
+    background-color: #FFF;
+    color: #2E98D2;
+    border: #2E98D2 solid 2px;
   }
   .hamburger-menu {
     display: none;
@@ -1517,11 +1548,12 @@ PC表示
     text-align: center;
     vertical-align: middle;
     text-decoration: none;
-
+    border: #000 solid 3px;
     background: transparent;
   }
   .place_btn:hover {
-    background: rgba(0, 0, 0, 0.4);
+    border-color: #2E98D2;
+    color: #2E98D2;
   }
   #place #button {
     display: flex;
@@ -1579,10 +1611,17 @@ PC表示
     width: 31rem;
     height: 5.9rem;
     margin: auto;
+    transition: .3s all;
   }
 
   .contact-btn:hover {
-    opacity: 0.5;
+    background-color: #000000;
+    transition: .3s all;
+  }
+
+  .contact-btn:hover p {
+    color: #FFF;
+    transition: .3s all;
   }
 
   .contact-btn p {
@@ -1595,6 +1634,7 @@ PC表示
     line-height: 2.2rem;
     letter-spacing: 0.2em;
     margin-top: 3rem;
+    transition: .3s all;
   }
 
   .footer_link {
@@ -1630,10 +1670,12 @@ PC表示
     margin: 0.6rem 0 0.6rem 2rem;
     width: initial;
     margin-left: 5rem;
+    transition: .3s all;
   }
 
   .footer_link ul li:hover {
     opacity: 0.6;
+    transition: .3s all;
   }
 
   .footer_link a {
@@ -1667,6 +1709,12 @@ PC表示
     letter-spacing: 0.2em;
     color: #ffffff;
     order: 1;
+    transition: .3s all;
+  }
+
+  #footer_logo:hover {
+    opacity: .6;
+    transition: .3s all;
   }
 
   .footer_copyright {
