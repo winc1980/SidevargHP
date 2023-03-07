@@ -245,13 +245,13 @@ header {
   width: 100%;
   height: 0%;
   position: fixed;
-  top: -100%; 
+  top: -100%;
   right: 0%;
-  transition: all 0.7s; 
+  transition: all 0.7s;
   z-index: 950;
 }
 #menu-btn-check:checked ~ .menu-content {
-  top: -3%; 
+  top: -3%;
   right: 0%;
 }
 
@@ -461,12 +461,12 @@ table {
   padding-bottom: 20px;
   font-size: 1.2rem;
   color: #000;
-  transition: .3s all;
+  transition: 0.3s all;
   text-decoration: underline;
 }
 .info_message a:hover {
-  opacity: .6;
-  transition: .3s all;
+  opacity: 0.6;
+  transition: 0.3s all;
 }
 
 .info_images {
@@ -485,7 +485,7 @@ table {
 ブログ一覧
 -----------------------------------------------*/
 #bloglist {
-  margin-top: 8rem;
+  margin-top: 0;
 }
 
 .blogichiran_txt1 {
@@ -521,7 +521,7 @@ table {
   min-width: 28rem;
   max-width: 34.5rem;
   height: 24rem;
-  margin: 2rem auto;
+  margin: 1rem auto;
   padding: 1.5rem;
   background-color: #f7f7f7;
   transition: 0.5s all;
@@ -678,7 +678,7 @@ table {
   background: rgb(255, 255, 255);
   padding: 60px 0;
   position: relative;
-  margin: auto;
+  margin: 8rem 0 13rem 0;
 }
 
 #gallery .gallery_container {
@@ -1116,16 +1116,17 @@ PC表示
     right: 100px;
     font-size: 19px;
     flex-shrink: 0;
-    transition: .3s all;
+    transition: 0.3s all;
   }
   .header-logo {
     margin-left: 20px;
-    transition: .3s all;
+    transition: 0.3s all;
   }
-  .header-title:hover,.header-logo:hover {
+  .header-title:hover,
+  .header-logo:hover {
     cursor: pointer;
-    color: #2E98D2;
-    transition: .3s all;
+    color: #2e98d2;
+    transition: 0.3s all;
   }
   .header-menu {
     display: flex;
@@ -1150,25 +1151,25 @@ PC表示
     color: #000000;
     font-size: 1.6rem;
     margin-top: -10px;
-    margin-left: 3%; 
+    margin-left: 3%;
     margin-right: 47px;
-    transition: .3s all;
+    transition: 0.3s all;
   }
   .header-menu-item a:hover {
-    color: #2E98D2;
-    transition: .3s all;
+    color: #2e98d2;
+    transition: 0.3s all;
   }
 
   #contact {
     width: 128px;
     height: 43px;
     color: rgb(255, 255, 255);
-    background-color: #2E98D2;
+    background-color: #2e98d2;
     display: table-cell;
     margin-right: 0px;
     line-height: 43px;
     box-sizing: border-box;
-    transition: .3s all;
+    transition: 0.3s all;
     position: relative;
   }
   #contact span {
@@ -1181,9 +1182,9 @@ PC表示
     left: 50%;
   }
   #contact:hover {
-    background-color: #FFF;
-    color: #2E98D2;
-    border: #2E98D2 solid 2px;
+    background-color: #fff;
+    color: #2e98d2;
+    border: #2e98d2 solid 2px;
   }
   .hamburger-menu {
     display: none;
@@ -1425,6 +1426,9 @@ PC表示
   }
 
   .bloglist_btn {
+    width: 23.7rem;
+    height: 5.5rem;
+    font-size: 1.4rem;
   }
   .bloglist_btn:hover {
   }
@@ -1552,8 +1556,8 @@ PC表示
     background: transparent;
   }
   .place_btn:hover {
-    border-color: #2E98D2;
-    color: #2E98D2;
+    border-color: #2e98d2;
+    color: #2e98d2;
   }
   #place #button {
     display: flex;
@@ -1611,17 +1615,17 @@ PC表示
     width: 31rem;
     height: 5.9rem;
     margin: auto;
-    transition: .3s all;
+    transition: 0.3s all;
   }
 
   .contact-btn:hover {
     background-color: #000000;
-    transition: .3s all;
+    transition: 0.3s all;
   }
 
   .contact-btn:hover p {
-    color: #FFF;
-    transition: .3s all;
+    color: #fff;
+    transition: 0.3s all;
   }
 
   .contact-btn p {
@@ -1634,7 +1638,7 @@ PC表示
     line-height: 2.2rem;
     letter-spacing: 0.2em;
     margin-top: 3rem;
-    transition: .3s all;
+    transition: 0.3s all;
   }
 
   .footer_link {
@@ -1670,12 +1674,12 @@ PC表示
     margin: 0.6rem 0 0.6rem 2rem;
     width: initial;
     margin-left: 5rem;
-    transition: .3s all;
+    transition: 0.3s all;
   }
 
   .footer_link ul li:hover {
     opacity: 0.6;
-    transition: .3s all;
+    transition: 0.3s all;
   }
 
   .footer_link a {
@@ -1709,12 +1713,12 @@ PC表示
     letter-spacing: 0.2em;
     color: #ffffff;
     order: 1;
-    transition: .3s all;
+    transition: 0.3s all;
   }
 
   #footer_logo:hover {
-    opacity: .6;
-    transition: .3s all;
+    opacity: 0.6;
+    transition: 0.3s all;
   }
 
   .footer_copyright {
