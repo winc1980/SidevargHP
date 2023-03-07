@@ -678,7 +678,7 @@ table {
   background: rgb(255, 255, 255);
   padding: 60px 0;
   position: relative;
-  margin: 8rem 0 13rem 0;
+  margin: 4rem 0;
 }
 
 #gallery .gallery_container {
@@ -1448,6 +1448,10 @@ PC表示
   /*-----------------------------------------------
 ギャラリー
 -----------------------------------------------*/
+  #gallery {
+    margin: 8rem 0 13rem 0;
+  }
+
   .swiper-slide {
     color: #ffffff;
     width: 414px;
