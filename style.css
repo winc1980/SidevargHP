@@ -383,12 +383,8 @@ header {
   max-width: 1320px;
   flex-wrap: wrap-reverse;
   display: flex;
-
-  /* align-items: center; */
-  /* background-color: blue; */
 }
 .info_contents {
-  /* background-color: aqua; */
   padding: 0 1%;
   width: 100%;
 }
@@ -423,7 +419,6 @@ table {
 
 .info_message div {
   width: 40%;
-  /* height: 390px; */
   background: rgb(241, 236, 236);
 }
 .info_message table {
@@ -1263,22 +1258,14 @@ PC表示
 サークル情報
 -----------------------------------------------*/
   #info {
-    width: 100%;
-    background: white;
-    /* padding: 60px 0; */
     margin-top: 10%;
-    margin-bottom: 10%;
     margin-right: 10%;
   }
   .info_container {
     margin: 0 auto;
-    flex-wrap: wrap-reverse;
-    display: flex;
     align-items: center;
-    /* background-color: blue; */
   }
   .info_contents {
-    /* background-color: aqua; */
     padding: 0 5%;
     width: 45%;
   }
@@ -1287,45 +1274,19 @@ PC表示
     padding-bottom: 10%;
   }
   .info_h2 {
-    font-family: "Economica";
     font-size: 5rem;
     font-weight: 700;
-    /* margin: 0 0  0; */
   }
-
   .info_title p {
-    font-weight: 500;
     font-size: 2rem;
   }
-
-  /* #info .contents h2, */
-
-  .info_contents p,
-  table {
-    color: rgb(21, 20, 20);
-  }
-
   .info_message {
     padding: 2%;
   }
-  .info_message div {
-    /* width: 50%; */
-    background: rgb(241, 236, 236);
-  }
+
   .info_message table {
-    border-collapse: collapse;
     width: 110%;
     height: 100%;
-    text-align: left; /*左揃え*/
-  }
-  /* 棒線を表示する */
-  .info_message table tr {
-    border-top: #d9d9d9 solid 1px;
-    margin-top: 20px;
-  }
-  /* 一番下棒線を表示 */
-  .info_message table tr:last-child {
-    border-bottom: #d9d9d9 solid 1px;
   }
 
   .info_message table th {
@@ -1335,8 +1296,6 @@ PC表示
 
   /* infoの行の間隔 */
   .info_message table tr td {
-    padding-top: 20px;
-    padding-bottom: 20px;
     font-size: 1.4rem;
   }
 
@@ -1344,17 +1303,7 @@ PC表示
     width: 50%;
     height: 150%;
     box-shadow: 1.8rem 1.8rem 0em #f7f7f7;
-    /* box-shadow: 10px 10px 4px #ccc; */
   }
-  /* .info_images img {
-    vertical-align: top;
-  } */
-
-  /* .info_images img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  } */
 
   /*-----------------------------------------------
 ブログ(ホーム)
