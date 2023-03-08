@@ -442,6 +442,7 @@ table {
   padding: 2rem 0 2rem 1.4rem;
   font-size: 1.2rem;
   display: block;
+  font-weight: 700;
 }
 
 /* infoの行の間隔 */
@@ -449,6 +450,7 @@ table {
   padding-top: 20px;
   padding-bottom: 20px;
   font-size: 1.2rem;
+  font-weight: 400;
 }
 
 .info_message a {
@@ -471,6 +473,10 @@ table {
   box-shadow: 15px 15px 0px #d9d9d9;
   margin-bottom: 10%;
   /* box-shadow: 10px 10px 4px #ccc; */
+}
+
+.info_images img {
+  vertical-align:top;
 }
 /*-----------------------------------------------
 ブログ(ホーム)
@@ -822,6 +828,9 @@ table {
   padding-bottom: 10%;
   margin-right: 5%;
 }
+.schedule-container {
+  margin: 0 auto;
+}
 .sidevarg-schedule h1 {
   margin-top: -25px;
   letter-spacing: 0.1em;
@@ -850,6 +859,10 @@ table {
   font-weight: 400;
   letter-spacing: 0.2em;
   line-height: 2.4rem;
+}
+.g-calendar {
+  height: 50rem;
+  margin: 2rem 0 2rem 2rem;
 }
 /*-----------------------------------------------
 活動場所
@@ -897,7 +910,7 @@ table {
   letter-spacing: 0.2em;
   position: relative;
   display: inline-block;
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
   cursor: pointer;
   user-select: none;
   -webkit-transition: all 0.3s;
@@ -1253,10 +1266,12 @@ PC表示
   #info {
     margin-top: 10%;
     margin-right: 10%;
+    position: relative;
   }
   .info_container {
     margin: 0 auto;
     align-items: center;
+    justify-content: space-between;
   }
   .info_contents {
     padding: 0 5%;
@@ -1293,14 +1308,19 @@ PC表示
   }
 
   .info_images {
+    max-width: 718px;
+    max-height: 479px;
     width: 50%;
-    height: 150%;
-    box-shadow: 1.8rem 1.8rem 0em #f7f7f7;
+    height: auto;
+    box-shadow: 4rem 4rem 0em #f7f7f7;
+    position: absolute;
+    top: 0;
+    right: 40px;
   }
 
-  /*-----------------------------------------------
-ブログ(ホーム)
------------------------------------------------*/
+  .info_images img {
+    display: block;
+  }
 
   /*-----------------------------------------------
 ブログ一覧
@@ -1376,18 +1396,6 @@ PC表示
   }
 
   /*-----------------------------------------------
-ブログ（バックエンド）
------------------------------------------------*/
-
-  /*-----------------------------------------------
-各ブログ
------------------------------------------------*/
-  .eachblog_div1 h1 {
-    font-size: 100%;
-    letter-spacing: 0.1em;
-  }
-
-  /*-----------------------------------------------
 ギャラリー
 -----------------------------------------------*/
   #gallery {
@@ -1428,17 +1436,26 @@ PC表示
 活動日程
 -----------------------------------------------*/
   .sidevarg-schedule {
-    padding-top: 90px;
-    padding-bottom: 142px;
+    padding: 3rem 0;
     right: 150px;
     left: -100px;
+  }
+  .schedule-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 0 0 10%;
+  }
+  .schedule-contents {
+    width: 40%;
+    margin: 5% 0 5% 5%;
   }
   .sidevarg-schedule h1 {
     font-size: 5rem;
     font-weight: 700;
     margin-inline-start: 0%;
     text-align: start;
-    margin-left: 8.3rem;
+    margin: 0;
   }
   .sidevarg-schedule h2 {
     letter-spacing: 0.1em;
@@ -1447,17 +1464,20 @@ PC表示
     margin-bottom: 4.5rem;
     margin-inline-start: 0%;
     text-align: start;
-    margin-left: 8.3rem;
+    margin-left: 0;
   }
   .sidevarg-schedule p {
     font-size: 1.4rem;
     line-height: 2.8rem;
-    margin-inline-end: 53%;
     margin-inline-start: 5%;
     text-align: start;
-    margin-left: 8.3rem;
+    margin: 0;
   }
-
+  .g-calendar {
+    height: 50rem;
+    width: 50%;
+    max-width: 70rem;
+  }
   /*-----------------------------------------------
 活動場所
 -----------------------------------------------*/
@@ -1482,7 +1502,7 @@ PC表示
     font-size: 5rem;
   }
   .place_btn {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     border: #000 solid 3px;
   }
   .place_btn:hover {
