@@ -21,42 +21,42 @@
         <!-- サークル情報　ここから -->
         <section id="info">
             <div class="info_container">
-                <div class="info_contents">
+                <div class="info_contents fade">
                     <div class="info_title">
-                    <h2 class="info_h2">Information</h2>
-                    <p>サークル情報</p>
+                        <h2 class="info_h2">Information</h2>
+                        <p>サークル情報</p>
                     </div>
                     <div class="info_message">
-                    <table>
-                        <tr>
-                        <th>サークル名</th>
-                        <td><?php echo get_post_meta( 1, 'circle_name', true ); ?></td>
-                        </tr>
-                        <tr>
-                        <th>人数</th>
-                        <td><?php echo get_post_meta( 1, 'members', true ); ?></td>
-                        </tr>
-                        <tr>
-                        <th>代表</th>
-                        <td><?php echo get_post_meta( 1, 'representative_name', true ); ?></td>
-                        </tr>
-                        <tr>
-                        <th>設立</th>
-                        <td><?php echo get_post_meta( 1, 'establish_year', true ); ?></td>
-                        </tr>
-                        <tr>
-                        <th>新歓情報</th>
-                        <td><?php echo nl2br( get_post_meta( 1, 'welcom_party_info', true ) ); ?></td>
-                        </tr>
-                        <tr>
-                        <th>入金方法</th>
-                        <td><?php echo nl2br( get_post_meta( 1, 'whoto_payment', true ) ); ?></td>
-                        </tr>
-                    </table>
+                        <table>
+                            <tr>
+                              <th>サークル名</th>
+                              <td><?php echo get_post_meta( 1, 'circle_name', true ); ?></td>
+                              </tr>
+                            <tr>
+                              <th>人数</th>
+                              <td><?php echo get_post_meta( 1, 'members', true ); ?></td>
+                            </tr>
+                            <tr>
+                              <th>代表</th>
+                              <td><?php echo get_post_meta( 1, 'representative_name', true ); ?></td>
+                            </tr>
+                            <tr>
+                              <th>設立</th>
+                              <td><?php echo get_post_meta( 1, 'establish_year', true ); ?></td>
+                            </tr>
+                            <tr>
+                              <th>新歓情報</th>
+                              <td><?php echo nl2br( get_post_meta( 1, 'welcom_party_info', true ) ); ?></td>
+                            </tr>
+                            <tr>
+                              <th>入金方法</th>
+                              <td><?php echo nl2br( get_post_meta( 1, 'whoto_payment', true ) ); ?></td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
                 <div class="info_images">
-                    <img src="<?php echo get_theme_file_uri('src/sidevarg5 1.png'); ?>" class="mv_cv_img" alt="" width="100%" height="100%" />
+                    <img class="mv_cv_img" alt="info_images" width="100%" height="100%" src="<?php echo get_theme_file_uri('src/sidevarg5 1.png'); ?>">
                 </div>
             </div>
         </section>
@@ -70,8 +70,91 @@
 
         <!-- ブログ一覧　ここから -->
         <section id="bloglist">
+        <div class="blog_container fade">
+          <div class="blogichiran_txt1">Blog</div>
+          <div class="blogichiran_txt2">ブログ</div>
 
-        </section>
+          <div class="bloglist_cards container">
+            <div
+              class="blogichiran_box1"
+              onclick="location.href='bloglist.html'"
+            >
+              <div class="blogichiran_div1">2023.02.15</div>
+              <div class="blogichiran_div2">
+                あのイーハトーヴォのすきとおった風、夏でも
+              </div>
+              <div class="blogichiran_div3">
+                <img src="src/Rectangle 297.png" />
+              </div>
+              <div class="blogichiran_div4">
+                <p>
+                  山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。あああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+                </p>
+              </div>
+            </div>
+            <div
+              class="blogichiran_box1"
+              onclick="location.href='bloglist.html'"
+            >
+              <div class="blogichiran_div1">2023.02.15</div>
+              <div class="blogichiran_div2">
+                あのイーハトーヴォのすきとおった風、夏でも
+              </div>
+              <div class="blogichiran_div3">
+                <img src="src/Rectangle 297.png" />
+              </div>
+              <div class="blogichiran_div4">
+                <p>
+                  山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。あああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+                </p>
+              </div>
+            </div>
+            <div
+              class="blogichiran_box1"
+              onclick="location.href='bloglist.html'"
+            >
+              <div class="blogichiran_div1">2023.02.15</div>
+              <div class="blogichiran_div2">
+                あのイーハトーヴォのすきとおった風、夏でも
+              </div>
+              <div class="blogichiran_div3">
+                <img src="src/Rectangle 297.png" />
+              </div>
+              <div class="blogichiran_div4">
+                <p>
+                  山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。あああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+                </p>
+              </div>
+            </div>
+            <div
+              class="blogichiran_box1"
+              onclick="location.href='bloglist.html'"
+            >
+              <div class="blogichiran_div1">2023.02.15</div>
+              <div class="blogichiran_div2">
+                あのイーハトーヴォのすきとおった風、夏でも
+              </div>
+              <div class="blogichiran_div3">
+                <img src="src/Rectangle 297.png" />
+              </div>
+              <div class="blogichiran_div4">
+                <p>
+                  山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。あああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="bloglist_btn"
+            onclick="location.href='bloglist.html'"
+            target="_blank"
+          >
+            ブログ一覧
+            <i class="fas fa-angle-right fa-position-right"></i>
+          </button>
+        </div>
+      </section>
         <!-- ブログ一覧　ここまで -->
 
         <!-- ブログ（バックエンド）ここから -->
@@ -88,15 +171,15 @@
 
         <!-- ギャラリーここから -->
         <section id="gallery">
-            <div class="gallery_container fade">
-                <div class="gallery_title">
-                    <h2 style="margin: 0" class="gallery_title_h2">Gallery</h2>
-                </div>
-
-                <div class="gallery_text">
-                    <p><span>活動風景</span></p>
-                </div>
+          <div class="gallery_container fade">
+            <div class="gallery_title">
+              <h1>Gallery</h1>
             </div>
+
+            <div class="gallery_text">
+              <h2>活動風景</h2>
+            </div>
+          </div>
 
             <div class="swiper-parent fade">
                 <!-- Swiper START -->
@@ -139,54 +222,53 @@
 
         <!-- 活動場所ここから -->
         <section id="place">
-            <div class="container">
-              <div class="place_contents">
-                <div class="title">
-                  <h2 style="margin: 0">Place</h2>
-                  <p>活動場所</p>
-                </div>
-                <div class="message">
-                  <p>
-                    主な活動場所は早稲田大学戸山キャンパス学生会館E910です。活動の詳細についてはTwitterやInstagramをご覧ください。※早稲田大学のHPにリンクが飛びます。
-                  </p>
-                </div>
-                <div id="button">
-                  <button class="place_btn" id="btn1">
-                    学生会館について<i
-                      class="fas fa-angle-right fa-position-right"
-                    ></i>
-                  </button>
-                  <button class="place_btn" id="btn2">
-                    学生会館アクセス方法<i
-                      class="fas fa-angle-right fa-position-right"
-                    ></i>
-                  </button>
-    
-                  <!-- <input type="button" value="ボタン" id="button" onclick="#" /> -->
-                </div>
-              </div>
-              <div class="place_map fade">
-                <div>
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.5351292127925!2d130.412726115203!3d33.59141728073386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354191bf5f712adf%3A0x375bd70fbfdc83a0!2z56aP5bKh5biCIOWNmuWkmuWMuuW9ueaJgA!5e0!3m2!1sja!2sjp!4v1676770108891!5m2!1sja!2sjp"
-                    width="100%"
-                    height="450"
-                    style="border: 0"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                  ></iframe>
-                </div>
-              </div>
+        <div class="container">
+          <div class="place_contents fade">
+            <div class="place_title">
+              <h2 class="place_h2">Place</h2>
+              <p>活動場所</p>
             </div>
-          </section>
+            <div class="place_message">
+              <p>
+                主な活動場所は早稲田大学戸山キャンパス学生会館E910です。活動の詳細についてはTwitterやInstagramをご覧ください。
+              </p>
+            </div>
+            <div id="button">
+              <button
+                class="place_btn"
+                id="btn1"
+                onclick="window.open('https://www.waseda.jp/inst/student/facility/studentcenter')"
+                target="_blank"
+              >
+                学生会館について
+                <i class="fas fa-angle-right fa-position-right"></i>
+              </button>
+              <button
+                class="place_btn"
+                id="btn2"
+                onclick="window.open('https://waseda.app.box.com/s/lwwbo30xn58b1mjoahvthnmbrad5xqrm')"
+                target="_blank"
+              >
+                学生会館アクセス方法
+                <i class="fas fa-angle-right fa-position-right"></i>
+              </button>
+
+              <!-- <input type="button" value="ボタン" id="button" onclick="#" /> -->
+            </div>
+          </div>
+          <div class="place_map fade">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.8379706399737!2d139.71545151525945!3d35.70560468018863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d1dc627dc3b%3A0xb8cb5ac09b074b5d!2z5pep56iy55Sw5aSn5a2mIOaIuOWxseOCreODo-ODs-ODkeOCuQ!5e0!3m2!1sja!2sjp!4v1677062772945!5m2!1sja!2sjp"
+              width="100%"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
         <!-- 活動場所ここまで -->
-
-        <!-- フッターここから -->
-        <section id="footer">
-
-        </section>
-        <!-- フッターここまで -->
-    </main>
 
 <?php get_footer(); ?>

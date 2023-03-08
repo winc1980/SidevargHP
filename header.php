@@ -37,20 +37,24 @@
             <header>
                 <div class="header_wrapper">
                     <img class="header-logo" src="<?php echo get_theme_file_uri('src/logo.svg'); ?>" alt="" onclick="location.href='./'">
-                    <h1 class="header-title">Waseda Cinemax Circle</h1>
+                    <h1 class="header-title" onclick="location.href='./'">CINEMAX SIDEVARG</h1>
                     <nav class="header-nav">
                         <ul class="header-menu">
                             <li class="header-menu-item">
-                                <a href="https://twitter.com/cinemaxsidevarg?lang=ja" id="twitter" target="_blank" rel="noopener noreferrer">Twitter</a>
+                                <a href="https://twitter.com/<?php echo get_post_meta( 1, 'twitter_id', true ); ?>"
+                                 id="twitter" target="_blank" rel="noopener noreferrer">Twitter</a>
                             </li>
                             <li class="header-menu-item">
-                                <a href="https://www.instagram.com/cinemaxsidevarg/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                                <a href="https://www.instagram.com/<?php echo get_post_meta( 1, 'instagram_id', true ); ?>"
+                                 target="_blank" rel="noopener noreferrer">Instagram</a>
                             </li>
                             <li class="header-menu-item">
-                                <a href="#">Blog</a>
+                                <a href="<?php echo home_url('list'); ?>">Blog</a>
                             </li>
                             <li class="header-menu-item">
-                                <a href="#" id="contact">Contact</a>
+                                <a id="contact" target="_blank" href="<?php echo get_post_meta( 1, 'line_link', true ); ?>">
+                                    <span>Contact</span>
+                                </a>
                             </li>
                         </ul>
                     </nav>
@@ -61,10 +65,10 @@
                     <!-- ここからメニュー-->
                     <div class="menu-content">
                         <ul>
-                            <li><a href="#">Twitter</a></li>
-                            <li><a href="#">Instagram</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a target="_blank" href="https://twitter.com/<?php echo get_post_meta( 1, 'twitter_id', true ); ?>">Twitter</a></li>
+                            <li><a target="_blank" href="https://www.instagram.com/<?php echo get_post_meta( 1, 'instagram_id', true ); ?>">Instagram</a></li>
+                            <li><a href="<?php echo home_url('list'); ?>">Blog</a></li>
+                            <li><a target="_blank" href="<?php echo get_post_meta( 1, 'line_link', true ); ?>">Contact</a></li>
                         </ul>
                     <!--ここまでメニュー-->
                     </div>

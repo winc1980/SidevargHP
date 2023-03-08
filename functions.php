@@ -199,8 +199,8 @@ function form4_box() {
                 <input type="text" id="twitter_id" name="twitter_id" value="<?php echo get_post_meta( 1, 'twitter_id', true ); ?>">
             </div>
             <div class="input-text-wrap">
-                <label for="twitter_id">公式LINE ユーザー名</label>
-                <input type="text" id="official_line_id" name="official_line_id" value="<?php echo get_post_meta( 1, 'twitter_id', true ); ?>">
+                <label for="line_">公式LINE ユーザー名</label>
+                <input type="text" id="official_line_link" name="official_line_link" value="<?php echo get_post_meta( 1, 'line_link', true ); ?>">
             </div>
             <div class="submit">
                 <input type="hidden" name="submit_type" value="form4">
@@ -210,33 +210,6 @@ function form4_box() {
     <?php
     }
     
-
-
-// メールを送信する
-function my_sendmail( $subject, $message ) {
-
-    // サイト管理情報を取得する
-    $admin_email = get_option('admin_email');
-    $site_name = get_option('blogname');
-
-    // 無害化
-    $subject = sanitize_text_field( $subject );
-
-    if ( $site_name ) {
-        $headers = "From: {$site_name} <{$admin_email}>\r\n";
-        wp_mail( $admin_email, $subject, $message, $headers );
-    } else {
-        return false;
-    }
-
-    return true;
-}
-
-// メール送信完了アラート
-if ( isset( $_GET['t'] ) && $_GET['t'] === 'sended' ) {
-    echo '<script>alert("メール送信が完了しました。");</script>';
-}
-
 add_action( 'after_setup_theme', function() {
     // メインビジュアル説明編集フォーム
     if ( isset( $_POST['submit_type'] ) && $_POST['submit_type'] === 'form1' ) {
@@ -261,30 +234,6 @@ add_action( 'after_setup_theme', function() {
         update_post_meta( 1, 'instagram_id',     $_POST['instagram_id']     );
         update_post_meta( 1, 'twitter_id',       $_POST['twitter_id']       );
         update_post_meta( 1, 'official_line_id', $_POST['official_line_id'] );
-    }
-    // お問い合わせフォーム
-    if ( isset( $_POST['submit_type'] ) && $_POST['submit_type'] === 'contact' ) {
-        if( !wp_verify_nonce( $_POST['nonce'], 'sDio33kls673df' ) ) return;
-        $name =    sanitize_text_field( $_POST['_name']   );
-        $email =   sanitize_text_field( $_POST['email']   );
-        $request = sanitize_text_field( $_POST['request'] );
-        $body =    sanitize_text_field( $_POST['body']    );
-
-        $subject = "{$name} 様からお問い合わせがありました。";
-
-        $message = "
-        {$name} 様からお問い合わせがありました。
-        ご要望：{$request}
-        メールアドレス：{$email}
-        
-        --------------メール本文--------------
-        {$body}
-        ";
-
-        my_sendmail( $subject, $message );
-
-        wp_redirect( home_url('/?t=sended') );
-        exit;
     }
 });
 
