@@ -822,6 +822,9 @@ table {
   padding-bottom: 10%;
   margin-right: 5%;
 }
+.schedule-container {
+  margin: 0 auto;
+}
 .sidevarg-schedule h1 {
   margin-top: -25px;
   letter-spacing: 0.1em;
@@ -850,6 +853,10 @@ table {
   font-weight: 400;
   letter-spacing: 0.2em;
   line-height: 2.4rem;
+}
+.g-calendar {
+  height: 50rem;
+  margin: 2rem 0 2rem 2rem;
 }
 /*-----------------------------------------------
 活動場所
@@ -1299,10 +1306,6 @@ PC表示
   }
 
   /*-----------------------------------------------
-ブログ(ホーム)
------------------------------------------------*/
-
-  /*-----------------------------------------------
 ブログ一覧
 -----------------------------------------------*/
 
@@ -1376,18 +1379,6 @@ PC表示
   }
 
   /*-----------------------------------------------
-ブログ（バックエンド）
------------------------------------------------*/
-
-  /*-----------------------------------------------
-各ブログ
------------------------------------------------*/
-  .eachblog_div1 h1 {
-    font-size: 100%;
-    letter-spacing: 0.1em;
-  }
-
-  /*-----------------------------------------------
 ギャラリー
 -----------------------------------------------*/
   #gallery {
@@ -1428,17 +1419,26 @@ PC表示
 活動日程
 -----------------------------------------------*/
   .sidevarg-schedule {
-    padding-top: 90px;
-    padding-bottom: 142px;
+    padding: 3rem 0;
     right: 150px;
     left: -100px;
+  }
+  .schedule-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 0 0 10%;
+  }
+  .schedule-contents {
+    width: 40%;
+    margin: 5% 0 5% 5%;
   }
   .sidevarg-schedule h1 {
     font-size: 5rem;
     font-weight: 700;
     margin-inline-start: 0%;
     text-align: start;
-    margin-left: 8.3rem;
+    margin: 0;
   }
   .sidevarg-schedule h2 {
     letter-spacing: 0.1em;
@@ -1447,17 +1447,20 @@ PC表示
     margin-bottom: 4.5rem;
     margin-inline-start: 0%;
     text-align: start;
-    margin-left: 8.3rem;
+    margin-left: 0;
   }
   .sidevarg-schedule p {
     font-size: 1.4rem;
     line-height: 2.8rem;
-    margin-inline-end: 53%;
     margin-inline-start: 5%;
     text-align: start;
-    margin-left: 8.3rem;
+    margin: 0;
   }
-
+  .g-calendar {
+    height: 50rem;
+    width: 50%;
+    max-width: 70rem;
+  }
   /*-----------------------------------------------
 活動場所
 -----------------------------------------------*/
