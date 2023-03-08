@@ -442,6 +442,7 @@ table {
   padding: 2rem 0 2rem 1.4rem;
   font-size: 1.2rem;
   display: block;
+  font-weight: 700;
 }
 
 /* infoの行の間隔 */
@@ -449,6 +450,7 @@ table {
   padding-top: 20px;
   padding-bottom: 20px;
   font-size: 1.2rem;
+  font-weight: 400;
 }
 
 .info_message a {
@@ -471,6 +473,10 @@ table {
   box-shadow: 15px 15px 0px #d9d9d9;
   margin-bottom: 10%;
   /* box-shadow: 10px 10px 4px #ccc; */
+}
+
+.info_images img {
+  vertical-align:top;
 }
 /*-----------------------------------------------
 ブログ(ホーム)
@@ -904,7 +910,7 @@ table {
   letter-spacing: 0.2em;
   position: relative;
   display: inline-block;
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
   cursor: pointer;
   user-select: none;
   -webkit-transition: all 0.3s;
@@ -1260,10 +1266,12 @@ PC表示
   #info {
     margin-top: 10%;
     margin-right: 10%;
+    position: relative;
   }
   .info_container {
     margin: 0 auto;
     align-items: center;
+    justify-content: space-between;
   }
   .info_contents {
     padding: 0 5%;
@@ -1300,9 +1308,18 @@ PC表示
   }
 
   .info_images {
+    max-width: 718px;
+    max-height: 479px;
     width: 50%;
-    height: 150%;
-    box-shadow: 1.8rem 1.8rem 0em #f7f7f7;
+    height: auto;
+    box-shadow: 4rem 4rem 0em #f7f7f7;
+    position: absolute;
+    top: 0;
+    right: 40px;
+  }
+
+  .info_images img {
+    display: block;
   }
 
   /*-----------------------------------------------
@@ -1485,7 +1502,7 @@ PC表示
     font-size: 5rem;
   }
   .place_btn {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     border: #000 solid 3px;
   }
   .place_btn:hover {
