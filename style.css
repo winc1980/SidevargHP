@@ -442,6 +442,7 @@ table {
   padding: 2rem 0 2rem 1.4rem;
   font-size: 1.2rem;
   display: block;
+  font-weight: 700;
 }
 
 /* infoの行の間隔 */
@@ -449,6 +450,7 @@ table {
   padding-top: 20px;
   padding-bottom: 20px;
   font-size: 1.2rem;
+  font-weight: 400;
 }
 
 .info_message a {
