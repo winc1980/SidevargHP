@@ -75,74 +75,30 @@
           <div class="blogichiran_txt2">ブログ</div>
 
           <div class="bloglist_cards container">
-            <div
-              class="blogichiran_box1"
-              onclick="location.href='bloglist.html'"
-            >
-              <div class="blogichiran_div1">2023.02.15</div>
-              <div class="blogichiran_div2">
-                あのイーハトーヴォのすきとおった風、夏でも
-              </div>
-              <div class="blogichiran_div3">
-                <img src="src/Rectangle 297.png" />
-              </div>
-              <div class="blogichiran_div4">
-                <p>
-                  山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。あああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-                </p>
-              </div>
-            </div>
-            <div
-              class="blogichiran_box1"
-              onclick="location.href='bloglist.html'"
-            >
-              <div class="blogichiran_div1">2023.02.15</div>
-              <div class="blogichiran_div2">
-                あのイーハトーヴォのすきとおった風、夏でも
-              </div>
-              <div class="blogichiran_div3">
-                <img src="src/Rectangle 297.png" />
-              </div>
-              <div class="blogichiran_div4">
-                <p>
-                  山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。あああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-                </p>
-              </div>
-            </div>
-            <div
-              class="blogichiran_box1"
-              onclick="location.href='bloglist.html'"
-            >
-              <div class="blogichiran_div1">2023.02.15</div>
-              <div class="blogichiran_div2">
-                あのイーハトーヴォのすきとおった風、夏でも
-              </div>
-              <div class="blogichiran_div3">
-                <img src="src/Rectangle 297.png" />
-              </div>
-              <div class="blogichiran_div4">
-                <p>
-                  山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。あああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-                </p>
-              </div>
-            </div>
-            <div
-              class="blogichiran_box1"
-              onclick="location.href='bloglist.html'"
-            >
-              <div class="blogichiran_div1">2023.02.15</div>
-              <div class="blogichiran_div2">
-                あのイーハトーヴォのすきとおった風、夏でも
-              </div>
-              <div class="blogichiran_div3">
-                <img src="src/Rectangle 297.png" />
-              </div>
-              <div class="blogichiran_div4">
-                <p>
-                  山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。あああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-                </p>
-              </div>
-            </div>
+
+                <?php
+                $args = array(
+                    'posts_per_page' => 4,
+                    'order'          => 'ASC',
+                );
+
+                $myposts = get_posts( $args );
+
+                foreach ( $myposts as $post ):
+                    setup_postdata( $post );
+                ?>
+                <div class="blogichiran_box1" onclick="location.href='<?php the_permalink(); ?>'" >
+                    <div class="blogichiran_div1"><?php the_date(); ?></div>
+                        <div class="blogichiran_div2"><?php the_title(); ?></div>
+                        <div class="blogichiran_div3">
+                            <img src="<?php echo get_theme_file_uri('src/Rectangle 297.png'); ?>" />
+                        </div>
+                        <div class="blogichiran_div4">
+                            <p><?php the_content('', true); ?></p>
+                        </div>
+                </div>
+                <?php endforeach; ?>
+
           </div>
 
           <button
@@ -209,20 +165,35 @@
         <!-- ギャラリーここまで -->
 
         <!-- 活動日程ここから -->
-        <section id="schedule">
-            <div class="sidevarg-schedule">
+          <section id="schedule">
+          <div class="sidevarg-schedule fade">
+            <div class="schedule-container">
+              <div class="schedule-contents">
                 <h1>Schedule</h1>
                 <h2>活動日程</h2>
-                <p>隔週月曜18:20〜ミーティングで行い、月一の土日どちらかで上映会を開いています。
-                    カレンダーに反映されていない活動詳細についてはTwitterやInstagramをご覧ください。
+                <p>
+                  隔週月曜18:20〜ミーティングで行い、月一の土日どちらかで上映会を開いています。
+                  カレンダーに反映されていない活動詳細についてはTwitterやInstagramをご覧ください。
                 </p>
+              </div>
+              <div class="g-calendar">
+                <iframe
+                  src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FTokyo&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&src=NmExMDk0OGUzMTYzOGY4NzU4ZmE4MzY0MDhiNDM5OTE2YmNlYmQ1NDYyZDllODQ2ODVjOGYzZWM3ZWFlYjlhM0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23B39DDB"
+                  style="border-width: 0"
+                  width="100%"
+                  height="100%"
+                  frameborder="0"
+                  scrolling="no"
+                ></iframe>
+              </div>
             </div>
+          </div>
         </section>
         <!-- 活動日程ここまで -->
 
         <!-- 活動場所ここから -->
         <section id="place">
-        <div class="container">
+        <div>
           <div class="place_contents fade">
             <div class="place_title">
               <h2 class="place_h2">Place</h2>
