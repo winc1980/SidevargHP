@@ -199,8 +199,8 @@ function form4_box() {
                 <input type="text" id="twitter_id" name="twitter_id" value="<?php echo get_post_meta( 1, 'twitter_id', true ); ?>">
             </div>
             <div class="input-text-wrap">
-                <label for="line_">公式LINE ユーザー名</label>
-                <input type="text" id="official_line_link" name="official_line_link" value="<?php echo get_post_meta( 1, 'line_link', true ); ?>">
+                <label for="official_line_link">公式LINE ユーザー名</label>
+                <input type="text" id="official_line_link" name="official_line_link" value="<?php echo get_post_meta( 1, 'official_line_link', true ); ?>">
             </div>
             <div class="submit">
                 <input type="hidden" name="submit_type" value="form4">
@@ -233,7 +233,7 @@ add_action( 'after_setup_theme', function() {
     if ( isset( $_POST['submit_type'] ) && $_POST['submit_type'] === 'form4' ) {
         update_post_meta( 1, 'instagram_id',     $_POST['instagram_id']     );
         update_post_meta( 1, 'twitter_id',       $_POST['twitter_id']       );
-        update_post_meta( 1, 'official_line_id', $_POST['official_line_id'] );
+        update_post_meta( 1, 'official_line_link', $_POST['official_line_link'] );
     }
 });
 
