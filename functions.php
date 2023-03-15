@@ -1,4 +1,6 @@
 <?php
+add_theme_support( 'post-thumbnails', array( 'post' ) );
+
 function meta_box() {
     add_meta_box(
         'form1_box',
@@ -26,7 +28,7 @@ function meta_box() {
     );
     add_meta_box(
         'form4_box',
-        'SNSの設定',
+        'サイトの設定',
         'form4_box',
         'dashboard',
         'normal',
@@ -199,8 +201,12 @@ function form4_box() {
                 <input type="text" id="twitter_id" name="twitter_id" value="<?php echo get_post_meta( 1, 'twitter_id', true ); ?>">
             </div>
             <div class="input-text-wrap">
-                <label for="official_line_link">公式LINE ユーザー名</label>
+                <label for="official_line_link">公式LINEリンク</label>
                 <input type="text" id="official_line_link" name="official_line_link" value="<?php echo get_post_meta( 1, 'official_line_link', true ); ?>">
+            </div>
+            <div class="input-text-wrap">
+                <label for="googlecalendar_share">Googleカレンダー共有リンク</label>
+                <input type="text" id="googlecalendar_share" name="googlecalendar_share" value="<?php echo get_post_meta( 1, 'googlecalendar_share', true ); ?>">
             </div>
             <div class="submit">
                 <input type="hidden" name="submit_type" value="form4">
@@ -211,10 +217,12 @@ function form4_box() {
     }
     
 add_action( 'after_setup_theme', function() {
+    
     // メインビジュアル説明編集フォーム
     if ( isset( $_POST['submit_type'] ) && $_POST['submit_type'] === 'form1' ) {
         update_post_meta( 1, 'mv_text', $_POST['mv_text'] );
     }
+
     // インフォーメーション更新
     if ( isset( $_POST['submit_type'] ) && $_POST['submit_type'] === 'form2' ) {
         update_post_meta( 1, 'circle_name',         $_POST['circle_name']         );
@@ -224,16 +232,19 @@ add_action( 'after_setup_theme', function() {
         update_post_meta( 1, 'welcom_party_info',   $_POST['welcom_party_info']   );
         update_post_meta( 1, 'whoto_payment',       $_POST['whoto_payment']       );
     }
+
     // ギャラリー更新
     if ( isset( $_POST['submit_type'] ) && $_POST['submit_type'] === 'form3' ) {
         if ( isset( $_POST['galleries'] ) )
             update_post_meta( 1, 'galleries', maybe_serialize( $_POST['galleries'] ) );
     }
-    // SNS
+
+    // サイトの設定
     if ( isset( $_POST['submit_type'] ) && $_POST['submit_type'] === 'form4' ) {
-        update_post_meta( 1, 'instagram_id',     $_POST['instagram_id']     );
-        update_post_meta( 1, 'twitter_id',       $_POST['twitter_id']       );
-        update_post_meta( 1, 'official_line_link', $_POST['official_line_link'] );
+        update_post_meta( 1, 'instagram_id',         $_POST['instagram_id']         );
+        update_post_meta( 1, 'twitter_id',           $_POST['twitter_id']           );
+        update_post_meta( 1, 'official_line_link',   $_POST['official_line_link']   );
+        update_post_meta( 1, 'googlecalendar_share', $_POST['googlecalendar_share'] );
     }
 });
 

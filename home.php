@@ -9,8 +9,8 @@
                     <h2>CINEMAX<br />SIDEVARG</h2>
                 </div>
             </div>
-            <div class="mv_wrapper_2 fade">
-                <div class="mv_contents_wrapper_2">
+            <div class="mv_wrapper_2">
+                <div class="mv_contents_wrapper_2 fade">
                     <h1>観る人も、撮る人も、<br />みんなが夢中になれる場所</h1>
                     <p><?php echo get_post_meta( 1, 'mv_text', true ); ?></p>
                 </div>
@@ -55,69 +55,65 @@
                         </table>
                     </div>
                 </div>
-                <div class="info_images">
+                <div class="info_images fade">
                     <img class="mv_cv_img" alt="info_images" width="100%" height="100%" src="<?php echo get_theme_file_uri('src/sidevarg5 1.png'); ?>">
                 </div>
             </div>
         </section>
         <!-- サークル情報　ここまで -->
 
-        <!-- ブログ(ホーム) ここから -->
-        <section id="bloghome">
-
-        </section>
-        <!-- ブログ(ホーム)　ここまで -->
-
         <!-- ブログ一覧　ここから -->
         <section id="bloglist">
-        <div class="blog_container fade">
-          <div class="blogichiran_txt1">Blog</div>
-          <div class="blogichiran_txt2">ブログ</div>
+            <div class="blog_container fade">
+            <div class="blogichiran_txt1">Blog</div>
+            <div class="blogichiran_txt2">ブログ</div>
 
-          <div class="bloglist_cards container">
+            <div class="bloglist_cards container">
+                    <?php
+                    $args = array( 
+                        'posts_per_page'=>4, 
+                        'order'=>'ASC' );
 
-                <?php
-                $args = array(
-                    'posts_per_page' => 4,
-                    'order'          => 'ASC',
-                );
+                    $myposts = get_posts( $args );
 
-                $myposts = get_posts( $args );
+                    foreach ( $myposts as $post ) {
+                        setup_postdata( $post );
+                        $postTitle = get_the_title();
+                        $postBody = get_the_excerpt();
+                        $postDate = get_the_date( 'Y.m.d', get_the_ID() );
+                        $permalink = get_the_permalink();
+                        $thumbnailUri = get_the_post_thumbnail_url();
+                        blog_card( $postTitle, $postBody, $postDate, $permalink, $thumbnailUri );
+                    }
+                    ?>
 
-                foreach ( $myposts as $post ):
-                    setup_postdata( $post );
-                ?>
-                <div class="blogichiran_box1" onclick="location.href='<?php the_permalink(); ?>'" >
-                    <div class="blogichiran_div1"><?php the_date(); ?></div>
-                        <div class="blogichiran_div2"><?php the_title(); ?></div>
-                        <div class="blogichiran_div3">
-                            <img src="<?php echo get_theme_file_uri('src/Rectangle 297.png'); ?>" />
-                        </div>
-                        <div class="blogichiran_div4">
-                            <p><?php the_content('', true); ?></p>
-                        </div>
-                </div>
-                <?php endforeach; ?>
+            </div>
 
-          </div>
-
-          <button
-            class="bloglist_btn"
-            onclick="location.href='bloglist.html'"
-            target="_blank"
-          >
-            ブログ一覧
-            <i class="fas fa-angle-right fa-position-right"></i>
-          </button>
-        </div>
-      </section>
-        <!-- ブログ一覧　ここまで -->
-
-        <!-- ブログ（バックエンド）ここから -->
-        <section id="blogback">
-
+            <button class="bloglist_btn" onclick="location.href='./list'" target="_blank">
+                ブログ一覧
+                <i class="fas fa-angle-right fa-position-right"></i>
+            </button>
+            </div>
         </section>
-        <!-- ブログ（バックエンド）ここまで -->
+
+        <?php
+        /* ブログカード生成 */
+        function blog_card( $postTitle, $postBody, $postDate, $permalink, $thumbnailUri ) { ?>
+
+            <div class="blogichiran_box1" onclick="location.href='<?php echo $permalink ?>'" >
+                <div class="blogichiran_div1"><?php echo $postDate; ?></div>
+                    <div class="blogichiran_div2"><?php echo $postTitle ?></div>
+                    <div class="blogichiran_div3">
+                        <img src="<?php echo $thumbnailUri ?>" />
+                    </div>
+                    <div class="blogichiran_div4">
+                        <p><?php echo $postBody; ?></p>
+                    </div>
+            </div>
+        <?php
+        }
+        ?>
+        <!-- ブログ一覧　ここまで -->
 
         <!-- 各ブログここから -->
         <section id="eachblog">
@@ -178,7 +174,7 @@
               </div>
               <div class="g-calendar">
                 <iframe
-                  src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FTokyo&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&src=NmExMDk0OGUzMTYzOGY4NzU4ZmE4MzY0MDhiNDM5OTE2YmNlYmQ1NDYyZDllODQ2ODVjOGYzZWM3ZWFlYjlhM0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23B39DDB"
+                  src="<?php echo get_post_meta( 1, 'googlecalendar_share', true); ?>"
                   style="border-width: 0"
                   width="100%"
                   height="100%"

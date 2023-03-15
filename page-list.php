@@ -3,172 +3,45 @@
 get_header();
 ?>
 
-<div class="eachblog_div1">
+  <div class="eachblog_div1">
       <h1>Blog</h1>
       <!-- <div class="blogichiran_txt1">Blog</div>
       <div class="blogichiran_txt2">ブログ</div> -->
+  </div>
+
+  <div class="bloglist_cards container">
+
+    <?php
+    $args = array(
+        'posts_per_page' => 10,
+        'order'          => 'ASC',
+    );
+
+    $myposts = get_posts( $args );
+
+    foreach ( $myposts as $post ):
+        setup_postdata( $post );
+    ?>
+    <div class="blogichiran_box1" onclick="location.href='<?php the_permalink(); ?>'" >
+        <div class="blogichiran_div1"><?php echo get_the_date( 'Y.m.d', get_the_ID() ); ?></div>
+            <div class="blogichiran_div2"><?php the_title(); ?></div>
+            <div class="blogichiran_div3">
+                <img src="<?php echo get_theme_file_uri('src/Rectangle 297.png'); ?>" />
+            </div>
+            <div class="blogichiran_div4">
+                <p><?php echo get_the_excerpt(); ?></p>
+            </div>
     </div>
-    <div class="bloglist_cards container">
-      <div class="blogichiran_box1" onclick="location.href='bloglist.html'">
-        <div class="blogichiran_div1">2023.02.15</div>
-        <div class="blogichiran_div2">
-          あのイーハトーヴォのすきとおった風、夏でも
-        </div>
-        <div class="blogichiran_div3">
-          <img src="src/Rectangle 297.png" />
-        </div>
-        <div class="blogichiran_div4">
-          <p>
-            1
-            山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。あああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-          </p>
-        </div>
-      </div>
+    <?php endforeach; ?>
 
-      <div class="blogichiran_box1" onclick="location.href='bloglist.html'">
-        <div class="blogichiran_div1">2023.02.15</div>
-        <div class="blogichiran_div2">
-          あのイーハトーヴォのすきとおった風、夏でも
-        </div>
-        <div class="blogichiran_div3">
-          <img src="src/Rectangle 296.png" />
-        </div>
-        <div class="blogichiran_div4">
-          <p>
-            2
-            山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。あああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-          </p>
-        </div>
-      </div>
+  </div>
 
-      <div class="blogichiran_box1" onclick="location.href='bloglist.html'">
-        <div class="blogichiran_div1">2023.02.15</div>
-        <div class="blogichiran_div2">
-          あのイーハトーヴォのすきとおった風、夏でも
-        </div>
-        <div class="blogichiran_div3">
-          <img src="src/Rectangle 298.png" />
-        </div>
-        <div class="blogichiran_div4">
-          <p>
-            3
-            山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。あああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-          </p>
-        </div>
-      </div>
+  <?php
+  $args = array();
 
-      <div class="blogichiran_box1" onclick="location.href='bloglist.html'">
-        <div class="blogichiran_div1">2023.02.15</div>
-        <div class="blogichiran_div2">
-          あのイーハトーヴォのすきとおった風、夏でも
-        </div>
-        <div class="blogichiran_div3">
-          <img src="src/Rectangle 299.png" />
-        </div>
-        <div class="blogichiran_div4">
-          <p>
-            4
-            山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。あああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-          </p>
-        </div>
-      </div>
-
-      <div class="blogichiran_box1" onclick="location.href='bloglist.html'">
-        <div class="blogichiran_div1">2023.02.15</div>
-        <div class="blogichiran_div2">
-          あのイーハトーヴォのすきとおった風、夏でも
-        </div>
-        <div class="blogichiran_div3">
-          <img src="src/Rectangle 297.png" />
-        </div>
-        <div class="blogichiran_div4">
-          <p>
-            5
-            山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。あああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-          </p>
-        </div>
-      </div>
-
-      <div class="blogichiran_box1" onclick="location.href='bloglist.html'">
-        <div class="blogichiran_div1">2023.02.15</div>
-        <div class="blogichiran_div2">
-          あのイーハトーヴォのすきとおった風、夏でも
-        </div>
-        <div class="blogichiran_div3">
-          <img src="src/Rectangle 296.png" />
-        </div>
-        <div class="blogichiran_div4">
-          <p>
-            6
-            山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。あああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-          </p>
-        </div>
-      </div>
-
-      <div class="blogichiran_box1" onclick="location.href='bloglist.html'">
-        <div class="blogichiran_div1">2023.02.15</div>
-        <div class="blogichiran_div2">
-          あのイーハトーヴォのすきとおった風、夏でも
-        </div>
-        <div class="blogichiran_div3">
-          <img src="src/Rectangle 298.png" />
-        </div>
-        <div class="blogichiran_div4">
-          <p>
-            7
-            山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。あああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-          </p>
-        </div>
-      </div>
-
-      <div class="blogichiran_box1" onclick="location.href='bloglist.html'">
-        <div class="blogichiran_div1">2023.02.15</div>
-        <div class="blogichiran_div2">
-          あのイーハトーヴォのすきとおった風、夏でも
-        </div>
-        <div class="blogichiran_div3">
-          <img src="src/Rectangle 299.png" />
-        </div>
-        <div class="blogichiran_div4">
-          <p>
-            8
-            山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。あああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-          </p>
-        </div>
-      </div>
-
-      <div class="blogichiran_box1" onclick="location.href='bloglist.html'">
-        <div class="blogichiran_div1">2023.02.15</div>
-        <div class="blogichiran_div2">
-          あのイーハトーヴォのすきとおった風、夏でも
-        </div>
-        <div class="blogichiran_div3">
-          <img src="src/Rectangle 297.png" />
-        </div>
-        <div class="blogichiran_div4">
-          <p>
-            9
-            山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。あああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-          </p>
-        </div>
-      </div>
-
-      <div class="blogichiran_box1" onclick="location.href='bloglist.html'">
-        <div class="blogichiran_div1">2023.02.15</div>
-        <div class="blogichiran_div2">
-          あのイーハトーヴォのすきとおった風、夏でも
-        </div>
-        <div class="blogichiran_div3">
-          <img src="src/Rectangle 296.png" />
-        </div>
-        <div class="blogichiran_div4">
-          <p>
-            10
-            山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。あああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-          </p>
-        </div>
-      </div>
-    </div>
+  paginate_links( $args );
+  wp_reset_postdata();
+  ?>
 
     <!-- サンプル -->
     <!-- Font Awesome 5  -->

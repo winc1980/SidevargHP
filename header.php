@@ -27,9 +27,14 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- google search console -->
+        <meta name="google-site-verification" content="KXapes6V2Q3zLVwkw_SiRxpjgFn43SjrAV_zJqiKJL0">
         <?php wp_head(); ?>
     </head>
-    <body>
+
+    
+    <NOSCRIPT><body></NOSCRIPT>
 
     <main>
         <!-- ヘッダー　ここから -->
@@ -52,7 +57,7 @@
                                 <a href="<?php echo home_url('list'); ?>">Blog</a>
                             </li>
                             <li class="header-menu-item">
-                                <a id="contact" target="_blank" href="<?php echo get_post_meta( 1, 'line_link', true ); ?>">
+                                <a id="contact" target="_blank" href="<?php echo get_post_meta( 1, 'official_line_link', true ); ?>">
                                     <span>Contact</span>
                                 </a>
                             </li>
@@ -68,7 +73,7 @@
                             <li><a target="_blank" href="https://twitter.com/<?php echo get_post_meta( 1, 'twitter_id', true ); ?>">Twitter</a></li>
                             <li><a target="_blank" href="https://www.instagram.com/<?php echo get_post_meta( 1, 'instagram_id', true ); ?>">Instagram</a></li>
                             <li><a href="<?php echo home_url('list'); ?>">Blog</a></li>
-                            <li><a target="_blank" href="<?php echo get_post_meta( 1, 'line_link', true ); ?>">Contact</a></li>
+                            <li><a target="_blank" href="<?php echo get_post_meta( 1, 'official_line_link', true ); ?>">Contact</a></li>
                         </ul>
                     <!--ここまでメニュー-->
                     </div>
