@@ -526,6 +526,7 @@ table {
   padding: 1.5rem;
   background-color: #f7f7f7;
   transition: 0.5s all;
+  cursor: pointer;
 }
 
 .blogichiran_box1:hover {
