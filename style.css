@@ -652,10 +652,34 @@ table {
   /* opacity: 0.2; */
   background: rgba(0, 0, 0, 0.4);
 }
-.pageNation p {
+
+/* ページネーション */
+div.pagination {
+  width: 500px;
+  margin: 0 auto;
+}
+ul.page-numbers {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+ul.page-numbers li {
+  padding: 5px 10px;
+}
+a.page-numbers,
+span.page-numbers {
+  display: flex;
   font-family: "Economica";
   font-style: normal;
-  display: flex;
+  font-size: 2.5rem;
+  height: 100%;
+  align-items: center;
+}
+ul.page-numbers :has(.next) {
+  margin-left: 30%;
+}
+ul.page-numbers :has(.prev) {
+  margin-right: 30%;
 }
 
 /*-----------------------------------------------
