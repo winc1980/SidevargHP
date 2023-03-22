@@ -3,7 +3,7 @@
 get_header();
 ?>
 
-  <div class="eachblog_div1">
+  <div class="eachblog_div">
       <h1>Blog</h1>
       <!-- <div class="blogichiran_txt1">Blog</div>
       <div class="blogichiran_txt2">ブログ</div> -->
@@ -45,12 +45,18 @@ get_header();
 
     <!-- サンプル -->
     <!-- Font Awesome 5  -->
-    <div>
-      <i class="fa-solid fa-angles-left"></i>
-      <i class="fa-solid fa-angle-left"></i>
-      <p>123</p>
-      <i class="fa-solid fa-angle-right"></i>
-      <i class="fa-solid fa-angles-right"></i>
+    <div class="pageNation">
+      <div>
+        <i class="fa-solid fa-angles-left"></i>
+        <i class="fa-solid fa-angle-left"></i>
+      </div>
+      <div>
+        <p>123</p>
+      </div>
+      <div>
+        <i class="fa-solid fa-angle-right"></i>
+        <i class="fa-solid fa-angles-right"></i>
+      </div>
     </div>
 
     <!-- icons -->

@@ -161,76 +161,80 @@
 
         <!-- 活動日程ここから -->
         <section id="schedule">
-            <div class="sidevarg-schedule">
-                <h1>Schedule</h1>
-                <h2>活動日程</h2>
-                <p>隔週月曜18:20〜ミーティングで行い、月一の土日どちらかで上映会を開いています。
-                    カレンダーに反映されていない活動詳細についてはTwitterやInstagramをご覧ください。
-                </p>
-              </div>
-              <div class="g-calendar">
-                <iframe
-                  src="<?php echo get_post_meta( 1, 'googlecalendar_share', true); ?>"
-                  style="border-width: 0"
-                  width="100%"
-                  height="100%"
-                  frameborder="0"
-                  scrolling="no"
-                ></iframe>
-              </div>
+            <div class="sidevarg-schedule fade">
+                <div class="schedule-container">
+                    <div class="schedule-contents">
+                        <h1>Schedule</h1>
+                        <h2>活動日程</h2>
+                        <p>
+                        隔週月曜18:20〜ミーティングで行い、月一の土日どちらかで上映会を開いています。
+                        カレンダーに反映されていない活動詳細についてはTwitterやInstagramをご覧ください。
+                        </p>
+                    </div>
+                    <div class="g-calendar">
+                        <iframe
+                        src="<?php echo get_post_meta( 1, 'googlecalendar_share', true); ?>"
+                        style="border-width: 0"
+                        width="100%"
+                        height="100%"
+                        frameborder="0"
+                        scrolling="no"
+                        ></iframe>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- 活動日程ここまで -->
 
         <!-- 活動場所ここから -->
         <section id="place">
-        <div class="container">
-          <div class="place_contents fade">
-            <div class="place_title">
-              <h2 class="place_h2">Place</h2>
-              <p>活動場所</p>
-            </div>
-            <div class="place_message">
-              <p>
-                主な活動場所は早稲田大学戸山キャンパス学生会館E910です。活動の詳細についてはTwitterやInstagramをご覧ください。
-              </p>
-            </div>
-            <div id="button">
-              <button
-                class="place_btn"
-                id="btn1"
-                onclick="window.open('https://www.waseda.jp/inst/student/facility/studentcenter')"
-                target="_blank"
-              >
-                学生会館について
-                <i class="fas fa-angle-right fa-position-right"></i>
-              </button>
-              <button
-                class="place_btn"
-                id="btn2"
-                onclick="window.open('https://waseda.app.box.com/s/lwwbo30xn58b1mjoahvthnmbrad5xqrm')"
-                target="_blank"
-              >
-                学生会館アクセス方法
-                <i class="fas fa-angle-right fa-position-right"></i>
-              </button>
+            <div>
+            <div class="place_contents fade">
+                <div class="place_title">
+                <h2 class="place_h2">Place</h2>
+                <p>活動場所</p>
+                </div>
+                <div class="place_message">
+                <p>
+                    主な活動場所は早稲田大学戸山キャンパス学生会館E910です。活動の詳細についてはTwitterやInstagramをご覧ください。
+                </p>
+                </div>
+                <div id="button">
+                <button
+                    class="place_btn"
+                    id="btn1"
+                    onclick="window.open('https://www.waseda.jp/inst/student/facility/studentcenter')"
+                    target="_blank"
+                >
+                    学生会館について
+                    <i class="fas fa-angle-right fa-position-right"></i>
+                </button>
+                <button
+                    class="place_btn"
+                    id="btn2"
+                    onclick="window.open('https://waseda.app.box.com/s/lwwbo30xn58b1mjoahvthnmbrad5xqrm')"
+                    target="_blank"
+                >
+                    学生会館アクセス方法
+                    <i class="fas fa-angle-right fa-position-right"></i>
+                </button>
 
-              <!-- <input type="button" value="ボタン" id="button" onclick="#" /> -->
+                <!-- <input type="button" value="ボタン" id="button" onclick="#" /> -->
+                </div>
             </div>
-          </div>
-          <div class="place_map fade">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.8379706399737!2d139.71545151525945!3d35.70560468018863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d1dc627dc3b%3A0xb8cb5ac09b074b5d!2z5pep56iy55Sw5aSn5a2mIOaIuOWxseOCreODo-ODs-ODkeOCuQ!5e0!3m2!1sja!2sjp!4v1677062772945!5m2!1sja!2sjp"
-              width="100%"
-              height="450"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-        </div>
-      </section>
+            <div class="place_map fade">
+                <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.8379706399737!2d139.71545151525945!3d35.70560468018863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d1dc627dc3b%3A0xb8cb5ac09b074b5d!2z5pep56iy55Sw5aSn5a2mIOaIuOWxseOCreODo-ODs-ODkeOCuQ!5e0!3m2!1sja!2sjp!4v1677062772945!5m2!1sja!2sjp"
+                width="100%"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+            </div>
+            </div>
+        </section>
         <!-- 活動場所ここまで -->
 
 <?php get_footer(); ?>

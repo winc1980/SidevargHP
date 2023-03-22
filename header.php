@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
+        <!-- * * * * * * * * * * * * * * * * * * * * *
+            This website was designed by SHUMA MIYAZAKI 
+                 and coded by waseda winc HP team
+         * * * * * * * * * * * * * * * * * * * * * * * * -->
+
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,6 +32,17 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <!-- OGP 設定 -->
+        <meta property="og:url" content="https://sidevarg.wp.xdomain.jp/" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="SIDEVARG" />
+        <meta property="og:description" content="早稲田大学公認映画サークルCHINEMAX SIDEVARDの公式サイトです。" />
+        <meta property="og:site_name" content="SIDEVARG" />
+        <meta property="og:image" content="<?php echo get_theme_file_uri('src/pexels-md-iftekhar-uddin-emon-403495 1.png'); ?>" />
+        <!-- twitter OGP -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@cinemaxsidevarg" />
 
         <!-- google search console -->
         <meta name="google-site-verification" content="KXapes6V2Q3zLVwkw_SiRxpjgFn43SjrAV_zJqiKJL0">
