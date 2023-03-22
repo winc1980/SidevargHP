@@ -9,8 +9,8 @@
                     <h2>CINEMAX<br />SIDEVARG</h2>
                 </div>
             </div>
-            <div class="mv_wrapper_2 fade">
-                <div class="mv_contents_wrapper_2">
+            <div class="mv_wrapper_2">
+                <div class="mv_contents_wrapper_2 fade">
                     <h1>観る人も、撮る人も、<br />みんなが夢中になれる場所</h1>
                     <p><?php echo get_post_meta( 1, 'mv_text', true ); ?></p>
                 </div>
@@ -55,113 +55,64 @@
                         </table>
                     </div>
                 </div>
-                <div class="info_images">
+                <div class="info_images fade">
                     <img class="mv_cv_img" alt="info_images" width="100%" height="100%" src="<?php echo get_theme_file_uri('src/sidevarg5 1.png'); ?>">
                 </div>
             </div>
         </section>
         <!-- サークル情報　ここまで -->
 
-        <!-- ブログ(ホーム) ここから -->
-        <section id="bloghome">
-
-        </section>
-        <!-- ブログ(ホーム)　ここまで -->
-
         <!-- ブログ一覧　ここから -->
         <section id="bloglist">
-        <div class="blog_container fade">
-          <div class="blogichiran_txt1">Blog</div>
-          <div class="blogichiran_txt2">ブログ</div>
+            <div class="blog_container fade">
+            <div class="blogichiran_txt1">Blog</div>
+            <div class="blogichiran_txt2">ブログ</div>
 
-          <div class="bloglist_cards container">
-            <div
-              class="blogichiran_box1"
-              onclick="location.href='bloglist.html'"
-            >
-              <div class="blogichiran_div1">2023.02.15</div>
-              <div class="blogichiran_div2">
-                あのイーハトーヴォのすきとおった風、夏でも
-              </div>
-              <div class="blogichiran_div3">
-                <img src="src/Rectangle 297.png" />
-              </div>
-              <div class="blogichiran_div4">
-                <p>
-                  山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。あああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-                </p>
-              </div>
-            </div>
-            <div
-              class="blogichiran_box1"
-              onclick="location.href='bloglist.html'"
-            >
-              <div class="blogichiran_div1">2023.02.15</div>
-              <div class="blogichiran_div2">
-                あのイーハトーヴォのすきとおった風、夏でも
-              </div>
-              <div class="blogichiran_div3">
-                <img src="src/Rectangle 297.png" />
-              </div>
-              <div class="blogichiran_div4">
-                <p>
-                  山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。あああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-                </p>
-              </div>
-            </div>
-            <div
-              class="blogichiran_box1"
-              onclick="location.href='bloglist.html'"
-            >
-              <div class="blogichiran_div1">2023.02.15</div>
-              <div class="blogichiran_div2">
-                あのイーハトーヴォのすきとおった風、夏でも
-              </div>
-              <div class="blogichiran_div3">
-                <img src="src/Rectangle 297.png" />
-              </div>
-              <div class="blogichiran_div4">
-                <p>
-                  山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。あああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-                </p>
-              </div>
-            </div>
-            <div
-              class="blogichiran_box1"
-              onclick="location.href='bloglist.html'"
-            >
-              <div class="blogichiran_div1">2023.02.15</div>
-              <div class="blogichiran_div2">
-                あのイーハトーヴォのすきとおった風、夏でも
-              </div>
-              <div class="blogichiran_div3">
-                <img src="src/Rectangle 297.png" />
-              </div>
-              <div class="blogichiran_div4">
-                <p>
-                  山路を登りながら、こう考えた。智に働けば角が立つ。情に棹させば流される。意地を通せば窮屈だ。とかくに人の世は住みにくい。あああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-                </p>
-              </div>
-            </div>
-          </div>
+            <div class="bloglist_cards container">
+                    <?php
+                    $args = array( 
+                        'posts_per_page'=>4, 
+                        'order'=>'ASC' );
 
-          <button
-            class="bloglist_btn"
-            onclick="location.href='bloglist.html'"
-            target="_blank"
-          >
-            ブログ一覧
-            <i class="fas fa-angle-right fa-position-right"></i>
-          </button>
-        </div>
-      </section>
-        <!-- ブログ一覧　ここまで -->
+                    $myposts = get_posts( $args );
 
-        <!-- ブログ（バックエンド）ここから -->
-        <section id="blogback">
+                    foreach ( $myposts as $post ) {
+                        setup_postdata( $post );
+                        $postTitle = get_the_title();
+                        $postBody = get_the_excerpt();
+                        $postDate = get_the_date( 'Y.m.d', get_the_ID() );
+                        $permalink = get_the_permalink();
+                        $thumbnailUri = get_the_post_thumbnail_url();
+                        blog_card( $postTitle, $postBody, $postDate, $permalink, $thumbnailUri );
+                    }
+                    ?>
 
+            </div>
+            <button class="bloglist_btn" onclick="location.href='./list'" target="_blank">
+                ブログ一覧
+                <i class="fas fa-angle-right fa-position-right"></i>
+            </button>
+            </div>
         </section>
-        <!-- ブログ（バックエンド）ここまで -->
+
+        <?php
+        /* ブログカード生成 */
+        function blog_card( $postTitle, $postBody, $postDate, $permalink, $thumbnailUri ) { ?>
+
+            <div class="blogichiran_box1" onclick="location.href='<?php echo $permalink ?>'" >
+                <div class="blogichiran_div1"><?php echo $postDate; ?></div>
+                    <div class="blogichiran_div2"><?php echo $postTitle ?></div>
+                    <div class="blogichiran_div3">
+                        <img src="<?php echo $thumbnailUri ?>" />
+                    </div>
+                    <div class="blogichiran_div4">
+                        <p><?php echo $postBody; ?></p>
+                    </div>
+            </div>
+        <?php
+        }
+        ?>
+        <!-- ブログ一覧　ここまで -->
 
         <!-- 各ブログここから -->
         <section id="eachblog">
@@ -216,6 +167,17 @@
                 <p>隔週月曜18:20〜ミーティングで行い、月一の土日どちらかで上映会を開いています。
                     カレンダーに反映されていない活動詳細についてはTwitterやInstagramをご覧ください。
                 </p>
+              </div>
+              <div class="g-calendar">
+                <iframe
+                  src="<?php echo get_post_meta( 1, 'googlecalendar_share', true); ?>"
+                  style="border-width: 0"
+                  width="100%"
+                  height="100%"
+                  frameborder="0"
+                  scrolling="no"
+                ></iframe>
+              </div>
             </div>
         </section>
         <!-- 活動日程ここまで -->
