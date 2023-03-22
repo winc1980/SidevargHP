@@ -203,6 +203,7 @@ function form4_box() {
             <div class="input-text-wrap">
                 <label for="official_line_link">公式LINEリンク</label>
                 <input type="text" id="official_line_link" name="official_line_link" value="<?php echo get_post_meta( 1, 'official_line_link', true ); ?>">
+
             </div>
             <div class="input-text-wrap">
                 <label for="googlecalendar_share">Googleカレンダー共有リンク</label>

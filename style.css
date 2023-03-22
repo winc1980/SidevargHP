@@ -476,7 +476,7 @@ table {
 }
 
 .info_images img {
-  vertical-align:top;
+  vertical-align: top;
 }
 /*-----------------------------------------------
 ブログ(ホーム)
@@ -485,8 +485,42 @@ table {
 /*-----------------------------------------------
 ブログ一覧
 -----------------------------------------------*/
+
 #bloglist {
   margin-top: 0;
+}
+
+.bloglist_div {
+  display: inline-block;
+  width: 100%;
+  height: 217px;
+  background-image: url("src/pexels-george-becker-116366 2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-size: 9.5rem;
+  position: relative;
+  z-index: 0;
+  margin-bottom: 30px;
+}
+.bloglist_div::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: brightness(75%);
+  /* 最背面へ */
+  z-index: -1;
+}
+
+.bloglist_div h1 {
+  text-align: center;
+  font-size: 45%;
+  margin: 85px 0;
+  color: white;
+  font-family: "Economica";
+  letter-spacing: 0.1em;
 }
 
 .blogichiran_txt1 {
@@ -618,6 +652,11 @@ table {
   /* opacity: 0.2; */
   background: rgba(0, 0, 0, 0.4);
 }
+.pageNation p {
+  font-family: "Economica";
+  font-style: normal;
+  display: flex;
+}
 
 /*-----------------------------------------------
 ブログ（バックエンド）
@@ -633,18 +672,32 @@ table {
 .eachblog_div1 {
   display: inline-block;
   width: 100%;
-  height: 500px;
-  background-image: url("src/Rectangle\ 297.png");
+  height: 217px;
+  /* background-image: url("src/pexels-george-becker-116366 2.png"); */
+  background-image: url("src/Rectangle 296.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   font-size: 9.5rem;
+  position: relative;
+  z-index: 0;
+  margin-bottom: 30px;
+}
+.eachblog_div1::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: brightness(75%);
+  /* 最背面へ */
+  z-index: -1;
 }
 
 .eachblog_div1 h1 {
   text-align: center;
-  font-size: 60%;
-  margin: 180px 0;
+  font-size: 45%;
+  margin: 60px 0;
   color: white;
   font-family: "Economica";
   letter-spacing: 0.1em;
@@ -1331,6 +1384,15 @@ PC表示
     margin-top: 4rem;
   }
 
+  .bloglist_div {
+    height: 479px;
+    background-image: url("src/pexels-george-becker-116366 1.png");
+  }
+  .bloglist_div h1 {
+    font-size: 60%;
+    margin: 180px 0;
+  }
+
   .blogichiran_txt1 {
     font-size: 5rem;
     line-height: 5.7rem;
@@ -1394,6 +1456,18 @@ PC表示
     font-size: 1.4rem;
   }
   .bloglist_btn:hover {
+  }
+
+  /*---------------------------------------
+   各ブログ
+  -----------------------------------------*/
+  .eachblog_div1 {
+    height: 479px;
+    background-image: url("src/Rectangle 296.png");
+  }
+  .eachblog_div1 h1 {
+    font-size: 60%;
+    margin: 180px 0;
   }
 
   /*-----------------------------------------------

@@ -88,7 +88,6 @@
                     ?>
 
             </div>
-
             <button class="bloglist_btn" onclick="location.href='./list'" target="_blank">
                 ブログ一覧
                 <i class="fas fa-angle-right fa-position-right"></i>
@@ -161,15 +160,12 @@
         <!-- ギャラリーここまで -->
 
         <!-- 活動日程ここから -->
-          <section id="schedule">
-          <div class="sidevarg-schedule fade">
-            <div class="schedule-container">
-              <div class="schedule-contents">
+        <section id="schedule">
+            <div class="sidevarg-schedule">
                 <h1>Schedule</h1>
                 <h2>活動日程</h2>
-                <p>
-                  隔週月曜18:20〜ミーティングで行い、月一の土日どちらかで上映会を開いています。
-                  カレンダーに反映されていない活動詳細についてはTwitterやInstagramをご覧ください。
+                <p>隔週月曜18:20〜ミーティングで行い、月一の土日どちらかで上映会を開いています。
+                    カレンダーに反映されていない活動詳細についてはTwitterやInstagramをご覧ください。
                 </p>
               </div>
               <div class="g-calendar">
@@ -183,13 +179,12 @@
                 ></iframe>
               </div>
             </div>
-          </div>
         </section>
         <!-- 活動日程ここまで -->
 
         <!-- 活動場所ここから -->
         <section id="place">
-        <div>
+        <div class="container">
           <div class="place_contents fade">
             <div class="place_title">
               <h2 class="place_h2">Place</h2>
