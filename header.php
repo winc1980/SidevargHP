@@ -70,7 +70,7 @@
                                  target="_blank" rel="noopener noreferrer">Instagram</a>
                             </li>
                             <li class="header-menu-item">
-                                <a href="<?php echo home_url('list'); ?>">Blog</a>
+                                <a href="<?php echo home_url( '?p=' . get_page_by_path('list')->ID ); ?>">Blog</a>
                             </li>
                             <li class="header-menu-item">
                                 <a id="contact" target="_blank" href="<?php echo get_post_meta( 1, 'official_line_link', true ); ?>">
@@ -88,7 +88,7 @@
                         <ul>
                             <li><a target="_blank" href="https://twitter.com/<?php echo get_post_meta( 1, 'twitter_id', true ); ?>">Twitter</a></li>
                             <li><a target="_blank" href="https://www.instagram.com/<?php echo get_post_meta( 1, 'instagram_id', true ); ?>">Instagram</a></li>
-                            <li><a href="<?php echo home_url('list'); ?>">Blog</a></li>
+                            <li><a href="<?php echo home_url( '?p=' . get_page_by_path('list')->ID ); ?>">Blog</a></li>
                             <li><a target="_blank" href="<?php echo get_post_meta( 1, 'official_line_link', true ); ?>">Contact</a></li>
                         </ul>
                     <!--ここまでメニュー-->
