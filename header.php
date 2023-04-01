@@ -39,7 +39,7 @@
         <meta property="og:title" content="SIDEVARG" />
         <meta property="og:description" content="早稲田大学公認映画サークルCHINEMAX SIDEVARDの公式サイトです。" />
         <meta property="og:site_name" content="SIDEVARG" />
-        <meta property="og:image" content="<?php echo get_theme_file_uri('src/pexels-md-iftekhar-uddin-emon-403495 1.png'); ?>" />
+        <meta property="og:image" content="<?php echo get_theme_file_uri('src/sidevarg_ogp_img.png'); ?>" />
         <!-- twitter OGP -->
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@cinemaxsidevarg" />
