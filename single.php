@@ -6,7 +6,7 @@
 
 <div class="blog_container">
     <div class="blog_contents">
-        <h2>あのイーハートヴォのすきとおった風、夏でも</h2>
+        <h2><?php echo get_the_title(); ?></h2>
         <p><?php echo get_the_date('Y.m.d', get_the_ID()); ?></p>
     </div>
 
