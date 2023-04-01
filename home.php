@@ -72,7 +72,8 @@
                     <?php
                     $args = array( 
                         'posts_per_page'=>4, 
-                        'order'=>'ASC' );
+                        'orderby'        => 'date'
+                    );
 
                     $myposts = get_posts( $args );
 
