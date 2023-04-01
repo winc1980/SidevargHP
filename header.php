@@ -44,8 +44,6 @@
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@cinemaxsidevarg" />
 
-        <!-- google search console -->
-        <meta name="google-site-verification" content="KXapes6V2Q3zLVwkw_SiRxpjgFn43SjrAV_zJqiKJL0">
         <?php wp_head(); ?>
     </head>
 
