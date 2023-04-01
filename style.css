@@ -601,6 +601,10 @@ table {
   grid-row-end: 6;
   padding-right: 1rem;
 }
+div.blogichiran_div3 img {
+  object-fit: contain;
+  height: 100%;
+}
 .blogichiran_div4 {
   grid-column-start: 2;
   grid-column-end: 3;

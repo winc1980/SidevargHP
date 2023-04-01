@@ -14,7 +14,7 @@ get_header();
     <?php
     $args = array(
         'posts_per_page' => 10,
-        'order'          => 'ASC',
+        'orderby'        => 'date',
         'paged'          => max( 1, get_query_var('paged') ),
     );
     $the_query = new WP_Query( $args );
@@ -26,7 +26,7 @@ get_header();
         <div class="blogichiran_div1"><?php echo get_the_date( 'Y.m.d', get_the_ID() ); ?></div>
             <div class="blogichiran_div2"><?php the_title(); ?></div>
             <div class="blogichiran_div3">
-                <img src="<?php echo get_theme_file_uri('src/Rectangle 297.png'); ?>" />
+                <img src="<?php echo get_the_post_thumbnail_url(); ?>" />
             </div>
             <div class="blogichiran_div4">
                 <p><?php echo get_the_excerpt(); ?></p>

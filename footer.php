@@ -6,7 +6,7 @@
                 お問い合わせは公式LINEにて受け付けております。<br />体験や入会、活動についてのご質問など、お気軽にお問い合わせください。
               </p>
               <a
-                href="<?php echo get_post_meta( 1, 'line_link', true ); ?>"
+                href="<?php echo get_post_meta( 1, 'official_line_link', true ); ?>"
                 class="contact-btn"
                 target="_blank"
               >
@@ -35,7 +35,7 @@
                       >公式LINE</a
                     >
                   </li>
-                  <li><a href="#">ブログ</a></li>
+                  <li><a href="<?php echo home_url( '?p=' . get_page_by_path('list')->ID ); ?>">ブログ</a></li>
                 </ul>
 
                 <a href="<?php echo home_url('./'); ?>" id="footer_logo">CINEMAX<br />SIDEVARG</a>

@@ -72,7 +72,8 @@
                     <?php
                     $args = array( 
                         'posts_per_page'=>4, 
-                        'order'=>'ASC' );
+                        'orderby'        => 'date'
+                    );
 
                     $myposts = get_posts( $args );
 
@@ -88,7 +89,7 @@
                     ?>
 
             </div>
-            <button class="bloglist_btn" onclick="location.href='./list'" target="_blank">
+            <button class="bloglist_btn" onclick="location.href='<?php echo home_url( '?p=' . get_page_by_path('list')->ID ); ?>'" target="_blank">
                 ブログ一覧
                 <i class="fas fa-angle-right fa-position-right"></i>
             </button>
