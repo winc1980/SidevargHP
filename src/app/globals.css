@@ -1,3 +1,1791 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/*
+Theme Name: 早稲田映画サークル CINEMAX SIDEVARG
+Version:    1.0.0
+Author:     早稲田大学コンピューター研究会WINC
+*/
+
+@charset "UTF-8";
+/* フォント周りの読み込み */
+@import url('https://fonts.googleapis.com/css2?family=Economica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css');
+@import url('https://use.fontawesome.com/releases/v5.0.8/css/all.css');
+
+/*----------------------------------------------------------------------------------------------
+SP表示
+----------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------
+ブロックの基底要素
+-----------------------------------------------*/
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  font-family: "Noto Sans", serif;
+}
+
+body * {
+  font-family: "Noto Sans JP", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: 1.6rem;
+}
+
+body {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+#page {
+  background-color: #000000;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.container .row {
+  width: 100%;
+  min-height: 200px;
+}
+
+.container .contents {
+  padding: 30px 10px;
+}
+
+.message {
+  padding-top: 60px;
+  margin-bottom: 30px;
+}
+
+.message p {
+  line-height: 30px;
+}
+
+/* 見出しサブタイトルの装飾 */
+
+/* .contents .title p::before {
+    content: '';
+    margin-right: 1.6rem;
+    border-right: 3px solid #3A5199;
+    background: #3A5199;
+} */
+
+/* section {
+    max-width: 1320px;
+    margin: 0 auto;
+} */
+
+.title h2 {
+  font-family: "Montserrat";
+  font-size: 3.5rem;
+  margin: 0 0 7px 0;
+}
+
+.title p {
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.5s, transform 1s;
+}
+
+.fade.active {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/*-----------------------------------------------
+ヘッダー
+-----------------------------------------------*/
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  padding-left: 2%;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  z-index: 1000;
+}
+.header_wrapper {
+  display: flex;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 980;
+  width: 100%;
+}
+.header-title {
+  font-family: "Economica";
+  font-style: normal;
+  letter-spacing: 0.2rem;
+  padding-left: 15px;
+  height: 10px;
+  margin-right: auto;
+  font-size: 1.6rem;
+  font-weight: 700;
+  z-index: 1100;
+}
+.header-logo {
+  width: 45px;
+  height: auto;
+  z-index: 1100;
+}
+.header-nav {
+  display: none;
+}
+
+.header-menu {
+  padding-left: 0px;
+  margin-right: -20px;
+}
+
+.menu-btn {
+  margin: 0 auto;
+  position: fixed;
+  top: 10px;
+  right: 27px;
+  display: flex;
+  height: 40px;
+  width: 40px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 25px;
+  border-radius: 3px;
+  background-color: #000000;
+  position: absolute;
+}
+.menu-btn span:before {
+  bottom: 8px;
+}
+.menu-btn span:after {
+  top: 8px;
+}
+
+#menu-btn-check:checked ~ .menu-btn span {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0
+  ); /*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+#menu-btn-check {
+  display: none;
+}
+.menu-content ul {
+  background-color: #ffffff;
+  padding: 70px 10px 0;
+  text-align: center;
+  z-index: 950;
+}
+.menu-content ul {
+  list-style: none;
+}
+.menu-content ul li a {
+  font-family: "Economica";
+  letter-spacing: 3.8px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  color: #000000;
+  text-decoration: none;
+  padding: 16px 30% 16px 30%;
+  position: relative;
+}
+.menu-content ul li a::before {
+  width: 7px;
+  height: 7px;
+  border-top: solid 2px #000000;
+  border-right: solid 2px #000000;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 11px;
+  top: 16px;
+}
+
+.menu-content {
+  width: 100%;
+  height: 0%;
+  position: fixed;
+  top: -100%;
+  right: 0%;
+  transition: all 0.7s;
+  z-index: 950;
+}
+#menu-btn-check:checked ~ .menu-content {
+  top: -3%;
+  right: 0%;
+}
+
+/*-----------------------------------------------
+メインビジュアル
+-----------------------------------------------*/
+
+.mv_wrapper_1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.mv_cv_img1 {
+  display: inline;
+  width: 100%;
+  height: 100%;
+  filter: brightness(45%);
+  position: absolute;
+  object-fit: cover;
+}
+
+.mv_contents_wrapper_1 {
+  /* background-color: red; */
+  position: relative;
+  width: 95%;
+  left: 5vw;
+  top: 47vh;
+  margin-bottom: 5%;
+}
+
+.mv_contents_wrapper_1 h1 {
+  position: relative;
+  width: 100%;
+  /* font-style: normal;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 400;
+  font-size: 3.5vw;
+  line-height: 0rem;
+  letter-spacing: 0.11em; */
+  font-style: normal;
+  font-family: "Noto Serif JP";
+  font-weight: 100;
+  font-size: 20px;
+  line-height: 36px;
+  /* identical to box height */
+
+  letter-spacing: 0.11em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.mv_contents_wrapper_1 h2 {
+  position: relative;
+  width: 100%;
+  /* background-color: #1d9ae3; */
+  margin-top: 5%;
+
+  font-family: "Economica";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 50px;
+  letter-spacing: 0.3em;
+  color: #ffffff;
+}
+
+.mv_wrapper_2 {
+  position: relative;
+  background: no-repeat url("/mv_cover2.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.mv_wrapper_2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(29, 154, 227, 78%);
+}
+
+.mv_contents_wrapper_2 {
+  /* background-color: red; */
+  margin: 0 auto;
+  top: 5vh;
+  padding: 18% 1.5rem;
+}
+
+.mv_contents_wrapper_2 h1 {
+  /* background-color: chartreuse; */
+  font-family: "Noto Serif JP";
+  font-style: normal;
+  position: relative;
+  /* font-style: normal; */
+  font-weight: 500;
+  font-size: 2.5rem;
+  letter-spacing: 0.11em;
+  color: #ffffff;
+  text-align: center;
+  margin: 0 0 42px 0;
+}
+
+.mv_contents_wrapper_2 p {
+  /* background-color: blueviolet; */
+  /* width: 80%; */
+  /* padding: 2%; */
+  font-family: "Noto Sans JP";
+  position: relative;
+  width: 100%;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  letter-spacing: 0.11rem;
+  line-height: 3.8rem;
+  color: #ffffff;
+}
+
+/*-----------------------------------------------
+サークル情報
+-----------------------------------------------*/
+#info {
+  width: 100%;
+  background: white;
+  margin-bottom: 10%;
+}
+.info_container {
+  max-width: 1320px;
+  flex-wrap: wrap-reverse;
+  display: flex;
+}
+.info_contents {
+  padding: 0 1%;
+  width: 100%;
+}
+.info_title {
+  padding-left: 9%;
+}
+#info .container {
+  flex-wrap: wrap-reverse;
+  display: flex;
+}
+.info_h2 {
+  font-family: "Economica";
+  font-style: normal;
+  letter-spacing: 0.1em;
+  font-size: 3.5rem;
+  margin: 0 0 7px 0;
+}
+.info_title p {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+}
+.info_contents p,
+table {
+  color: rgb(21, 20, 20);
+}
+.info_message {
+  padding: 10% 0 0 5%;
+}
+
+.info_message div {
+  width: 40%;
+  background: rgb(241, 236, 236);
+}
+.info_message table {
+  border-collapse: collapse;
+  width: 95%;
+  height: 100%;
+  text-align: left; /*左揃え*/
+}
+/* 棒線を表示する */
+.info_message table tr {
+  border-top: #d9d9d9 solid 0.1rem;
+  margin-top: 20px;
+}
+/* 一番下棒線を表示 */
+.info_message table tr:last-child {
+  border-bottom: #d9d9d9 solid 1px;
+}
+
+.info_message table th {
+  width: 10rem;
+  padding: 2rem 0 2rem 1.4rem;
+  font-size: 1.2rem;
+  display: block;
+  font-weight: 700;
+}
+
+/* infoの行の間隔 */
+.info_message table tr td {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.info_message a {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 1.2rem;
+  color: #000;
+  transition: 0.3s all;
+  text-decoration: underline;
+}
+.info_message a:hover {
+  opacity: 0.6;
+  transition: 0.3s all;
+}
+
+.info_images {
+  /* margin: 0; */
+  width: 95%;
+  height: 150%;
+  box-shadow: 15px 15px 0px #d9d9d9;
+  margin-bottom: 10%;
+  /* box-shadow: 10px 10px 4px #ccc; */
+}
+
+.info_images img {
+  vertical-align: top;
+}
+/*-----------------------------------------------
+ブログ(ホーム)
+-----------------------------------------------*/
+
+/*-----------------------------------------------
+ブログ一覧
+-----------------------------------------------*/
+
+#bloglist {
+  margin-top: 0;
+}
+
+.bloglist_div {
+  display: inline-block;
+  width: 100%;
+  height: 217px;
+  background-image: url("/pexels-george-becker-1163662.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-size: 9.5rem;
+  position: relative;
+  z-index: 0;
+  margin-bottom: 30px;
+}
+.bloglist_div::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: brightness(75%);
+  /* 最背面へ */
+  z-index: -1;
+}
+
+.bloglist_div h1 {
+  text-align: center;
+  font-size: 45%;
+  margin: 85px 0;
+  color: white;
+  font-family: "Economica";
+  letter-spacing: 0.1em;
+}
+
+.blogichiran_txt1 {
+  font-family: "Economica";
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 4.6rem;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+.blogichiran_txt2 {
+  font-family: "Noto Sans JP";
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  letter-spacing: 0.1em;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 4.5rem;
+}
+
+.bloglist_cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.blogichiran_box1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  min-width: 28rem;
+  max-width: 34.5rem;
+  height: 24rem;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  background-color: #f7f7f7;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+
+.blogichiran_box1:hover {
+  transform: scale(1.05);
+  transition: 0.5s all;
+}
+
+.blogichiran_div1 {
+  font-family: "Economica";
+  font-style: normal;
+  padding-top: 1rem;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.2em;
+}
+.blogichiran_div2 {
+  grid-row: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-family: "Economica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.2em;
+}
+
+.blogichiran_div3 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 6;
+  padding-right: 1rem;
+}
+div.blogichiran_div3 img {
+  object-fit: contain;
+  height: 100%;
+}
+.blogichiran_div4 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 6;
+  font-family: "Economica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.2em;
+  padding-left: 1rem;
+}
+
+.blogichiran_div4 p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+  font-family: "Economica";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  letter-spacing: 0.2em;
+  line-height: 1.41;
+}
+
+.bloglist_btn {
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: 20.8rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.2em;
+  position: relative;
+  display: block;
+  padding: 1rem 2rem;
+  margin: 2rem auto 0 auto;
+  cursor: pointer;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  border: 2px solid #000000;
+}
+.bloglist_btn:hover {
+  /* opacity: 0.2; */
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* ページネーション */
+div.pagination {
+  width: 500px;
+  margin: 0 auto;
+}
+ul.page-numbers {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+ul.page-numbers li {
+  padding: 5px 10px;
+}
+a.page-numbers,
+span.page-numbers {
+  display: flex;
+  font-family: "Economica";
+  font-style: normal;
+  font-size: 2.5rem;
+  height: 100%;
+  align-items: center;
+}
+ul.page-numbers :has(.next) {
+  margin-left: 30%;
+}
+ul.page-numbers :has(.prev) {
+  margin-right: 30%;
+}
+
+/*-----------------------------------------------
+ブログ（バックエンド）
+-----------------------------------------------*/
+
+/*-----------------------------------------------
+各ブログ
+-----------------------------------------------*/
+.blog_container {
+  padding: 0 10px;
+}
+
+.eachblog_div1 {
+  display: inline-block;
+  width: 100%;
+  height: 217px;
+  background-image: url("/Rectangle296.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-size: 9.5rem;
+  position: relative;
+  z-index: 0;
+  margin-bottom: 30px;
+}
+.eachblog_div1::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: brightness(75%);
+  /* 最背面へ */
+  z-index: -1;
+}
+
+.eachblog_div1 h1 {
+  text-align: center;
+  font-size: 45%;
+  margin: 60px 0;
+  color: white;
+  font-family: "Economica";
+  letter-spacing: 0.1em;
+}
+
+.eachinfo_div2 {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.blog_contents {
+  max-width: 1000px;
+  margin: 100px auto;
+}
+
+.blog_contents h2 {
+  text-align: center;
+  font-size: 3.7rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+}
+.blog_contents p {
+  text-align: right;
+  margin: 50px 0;
+}
+
+/*-----------------------------------------------
+ギャラリー
+-----------------------------------------------*/
+
+#gallery {
+  width: 100%;
+  background: rgb(255, 255, 255);
+  padding: 60px 0;
+  position: relative;
+  margin: 4rem 0;
+}
+
+#gallery .gallery_container {
+  margin-bottom: 30px;
+}
+
+#gallery .gallery_title_h2 {
+  font-size: 3.5rem;
+  font-family: "Montserrat";
+  margin: 0;
+}
+
+.gallery_title h1 {
+  text-align: center;
+  font-family: "Economica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 4.6rem;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+.gallery_text h2 {
+  text-align: center;
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  letter-spacing: 0.1em;
+}
+
+#gallery .gallery_button_pc_only {
+  display: none;
+}
+
+/* 全体のスタイル */
+
+.swiper-wrapper {
+  width: 100%;
+  height: 250px;
+}
+
+/* 全スライド共通スタイル */
+
+.swiper-slide {
+  color: #ffffff;
+  width: 78.93vw;
+  height: 296px;
+  text-align: center;
+  line-height: 110px;
+}
+
+/* ページネーションのサイズと色 */
+
+.swiper-pagination-bullet {
+  background-color: black;
+  height: 14px;
+  width: 14px;
+}
+
+.swiper-container-horizontal
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet-active {
+  position: relative;
+}
+
+.swiper-container-horizontal
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet-active::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: #000000;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+}
+
+.swiper-container-horizontal
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet-active::after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  border: #ffffff solid 3px;
+  border-radius: 50%;
+  position: absolute;
+  top: -3px;
+  left: -3px;
+}
+
+.swiper-container-horizontal
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 12px;
+}
+
+.swiper-pagination {
+  position: relative !important;
+}
+
+/* 幅・高さを指定 */
+
+.swiper-button-prev,
+.swiper-button-next {
+  height: 50px;
+  width: 50px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-size: 50px 50px;
+}
+
+/* 前に戻る画像パス */
+
+.swiper-button-prev {
+  background-image: url("/page-prev.png");
+}
+
+/* 次に進む画像パス */
+
+.swiper-button-next {
+  background-image: url("/page-next.png");
+}
+
+.swiper-button-next {
+  right: 15px;
+}
+
+.swiper-button-prev {
+  left: 15px;
+}
+
+/*-----------------------------------------------
+活動日程
+-----------------------------------------------*/
+.sidevarg-schedule {
+  background: #f7f7f7;
+  padding-top: 20%;
+  padding-bottom: 10%;
+  margin-right: 5%;
+}
+.schedule-container {
+  margin: 0 auto;
+}
+.sidevarg-schedule h1 {
+  margin-top: -25px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  font-family: "Economica";
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+.sidevarg-schedule h2 {
+  text-align: center;
+  margin-top: 5px;
+  letter-spacing: 2px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 5%;
+}
+.sidevarg-schedule p {
+  margin-right: 30%;
+  letter-spacing: 0.2em;
+  margin-inline-start: 9%;
+  margin-inline-end: 9%;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  line-height: 2.4rem;
+}
+.g-calendar {
+  height: 50rem;
+  margin: 2rem 0 2rem 2rem;
+}
+/*-----------------------------------------------
+活動場所
+-----------------------------------------------*/
+
+.place_contents {
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10%;
+}
+.place_contents .message {
+  text-align: left;
+}
+.place_h2 {
+  font-family: "Economica";
+  font-style: normal;
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0 0 7px 0;
+  letter-spacing: 0.1em;
+}
+.place_title p {
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+}
+.place_message p {
+  margin-top: 3rem;
+  margin-bottom: 2.5rem;
+  text-align: left;
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.2em;
+}
+
+.place_btn {
+  font-size: 1.4rem;
+  font-weight: 700;
+  width: 100%;
+  line-height: 1.7rem;
+  letter-spacing: 0.2em;
+  position: relative;
+  display: inline-block;
+  padding: 2rem 2rem;
+  cursor: pointer;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  border: 2px solid #000000;
+}
+#place #button {
+  margin: 5%;
+}
+#place #btn1 {
+  margin-bottom: 7%;
+}
+#place #btn2 {
+  margin-bottom: 7%;
+}
+#place .fa-position-right {
+  position: absolute;
+  top: calc(50% - 0.5em);
+  right: 1rem;
+}
+#place .place_map {
+  width: 100%;
+}
+
+/*-----------------------------------------------
+フッター
+-----------------------------------------------*/
+
+.footer_wrapper {
+  position: relative;
+  height: 55.8rem;
+}
+
+.footer_contact {
+  position: absolute;
+  height: 23.4rem;
+  top: 8rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  margin: auto;
+  z-index: 100;
+
+  background-color: #2e98d2;
+}
+
+.footer_contact p {
+  color: #fff;
+  text-align: center;
+  margin: 4.5rem 3rem 0em 3rem;
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  letter-spacing: 0.1em;
+}
+
+.contact-btn {
+  display: block;
+  background-color: #fff;
+  width: 15.4rem;
+  height: 5.4rem;
+  margin: auto;
+}
+
+.contact-btn p {
+  color: #000;
+  padding: 1.6rem;
+  font-family: "Economica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  letter-spacing: 0.2em;
+  margin-top: 3rem;
+}
+
+.footer_link {
+  position: relative;
+  height: 36.1rem;
+  width: 100%;
+  top: 19.7rem;
+  background-color: #202020;
+  z-index: 50;
+}
+
+.footer_link nav {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 28rem;
+  margin: 0 auto;
+  top: 16rem;
+}
+
+.footer_link ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding-inline-start: 0;
+  width: 28rem;
+  margin: 0 auto;
+  order: 1;
+}
+
+.footer_link ul li {
+  display: flex;
+  margin: 0.6rem 0 0.6rem 2rem;
+  width: 12rem;
+}
+
+.footer_link a {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.footer_link img {
+  width: 1.4rem;
+  margin: 0 1.6rem 0 0;
+}
+
+#footer_logo {
+  position: relative;
+  width: 8.1rem;
+  height: 4rem;
+  top: 3rem;
+  margin: 0 auto;
+  font-family: "Economica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.7rem;
+  line-height: 2rem;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  order: 2;
+}
+
+.footer_copyright {
+  position: relative;
+  width: 100%;
+  top: 23rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer_copyright p {
+  font-family: "Noto Sans JP";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+}
+
+/*----------------------------------------------------------------------------------------------
+PC表示
+----------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 768px) {
+  /*-----------------------------------------------
+ブロックの基底要素
+-----------------------------------------------*/
+  .container .row {
+    width: 50%;
+    height: 100%;
+  }
+  .container .contents {
+    max-width: 500px;
+    padding: 50px 20px;
+    margin: 0 auto;
+  }
+  body {
+    margin: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  /*-----------------------------------------------
+ヘッダー
+-----------------------------------------------*/
+  header {
+    top: 0%;
+    left: 0%;
+    margin: 0 auto;
+  }
+  .header-title {
+    letter-spacing: 3px;
+    margin-left: -4px;
+    margin-top: 10px;
+    right: 100px;
+    font-size: 19px;
+    flex-shrink: 0;
+    transition: 0.3s all;
+  }
+  .header-logo {
+    margin-left: 20px;
+    transition: 0.3s all;
+  }
+  .header-title:hover,
+  .header-logo:hover {
+    cursor: pointer;
+    color: #2e98d2;
+    transition: 0.3s all;
+  }
+  .header-menu {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-right: 0px;
+  }
+  .header-menu-item {
+    list-style: none;
+    display: inline-block;
+    padding: 0 0.3rem;
+  }
+  .header-nav {
+    margin-right: 70px;
+    display: flex;
+  }
+  .header-menu-item a {
+    font-family: "Economica";
+    letter-spacing: 3.8px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.6rem;
+    margin-top: -10px;
+    margin-left: 3%;
+    margin-right: 47px;
+    transition: 0.3s all;
+  }
+  .header-menu-item a:hover {
+    color: #2e98d2;
+    transition: 0.3s all;
+  }
+
+  #contact {
+    width: 128px;
+    height: 43px;
+    color: rgb(255, 255, 255);
+    background-color: #2e98d2;
+    display: table-cell;
+    margin-right: 0px;
+    line-height: 43px;
+    box-sizing: border-box;
+    transition: 0.3s all;
+    position: relative;
+  }
+  #contact span {
+    font-family: "Economica";
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    left: 50%;
+  }
+  #contact:hover {
+    background-color: #fff;
+    color: #2e98d2;
+    border: #2e98d2 solid 2px;
+  }
+  .hamburger-menu {
+    display: none;
+  }
+  /*-----------------------------------------------
+メインビジュアル
+-----------------------------------------------*/
+  .mv_cv_img1 {
+    display: inline;
+    width: 100%;
+    filter: brightness(45%);
+    position: absolute;
+    object-fit: cover;
+  }
+
+  .mv_contents_wrapper_1 {
+    position: relative;
+    width: 75%;
+    left: 15vw;
+    top: 25vh;
+  }
+
+  .mv_contents_wrapper_1 h1 {
+    position: relative;
+    width: 100%;
+    font-style: normal;
+    font-family: "Noto Serif JP", serif;
+    font-weight: 400;
+    font-size: 3.5vw;
+    line-height: 0rem;
+    letter-spacing: 0.11em;
+    color: #ffffff;
+    margin: 0;
+  }
+
+  .mv_contents_wrapper_1 h2 {
+    position: relative;
+    width: 100%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 7vw;
+    font-family: "Economica";
+    letter-spacing: 0.3em;
+    color: #ffffff;
+  }
+
+  .mv_contents_wrapper_2 {
+    margin: 0 auto;
+    top: 15vh;
+    max-width: 600px;
+    padding: 8% 0;
+  }
+
+  .mv_contents_wrapper_2 h1 {
+    position: relative;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4rem;
+    letter-spacing: 0.11em;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .mv_contents_wrapper_2 p {
+    position: relative;
+    width: 100%;
+    font-style: normal;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0.11em;
+    color: #ffffff;
+  }
+
+  /*-----------------------------------------------
+サークル情報
+-----------------------------------------------*/
+  #info {
+    margin-top: 10%;
+    margin-right: 10%;
+    position: relative;
+  }
+  .info_container {
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .info_contents {
+    padding: 0 5%;
+    width: 45%;
+  }
+  .info_title {
+    padding-left: 2%;
+    padding-bottom: 10%;
+  }
+  .info_h2 {
+    font-size: 5rem;
+    font-weight: 700;
+  }
+  .info_title p {
+    font-size: 2rem;
+  }
+  .info_message {
+    padding: 2%;
+  }
+
+  .info_message table {
+    width: 110%;
+    height: 100%;
+  }
+
+  .info_message table th {
+    padding-left: 0.7rem;
+    font-size: 1.4rem;
+  }
+
+  /* infoの行の間隔 */
+  .info_message table tr td {
+    font-size: 1.4rem;
+  }
+
+  .info_images {
+    max-width: 718px;
+    max-height: 479px;
+    width: 50%;
+    height: auto;
+    box-shadow: 4rem 4rem 0em #f7f7f7;
+    position: absolute;
+    top: 0;
+    right: 40px;
+  }
+
+  .info_images img {
+    display: block;
+  }
+
+  /*-----------------------------------------------
+ブログ一覧
+-----------------------------------------------*/
+
+  #bloglist {
+    margin-top: 4rem;
+  }
+
+  .bloglist_div {
+    height: 479px;
+    background-image: url("/pexels-george-becker-1163661.png");
+  }
+  .bloglist_div h1 {
+    font-size: 60%;
+    margin: 180px 0;
+  }
+
+  .blogichiran_txt1 {
+    font-size: 5rem;
+    line-height: 5.7rem;
+  }
+
+  .blogichiran_txt2 {
+    font-size: 2rem;
+    line-height: 2.9rem;
+  }
+
+  .blogichiran_box1 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    width: 51.9rem;
+    height: 20.1rem;
+    margin: 2.1rem;
+    min-width: none;
+    max-width: none;
+    background: #f7f7f7;
+  }
+
+  .blogichiran_div1 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    padding-left: 3rem;
+  }
+  .blogichiran_div2 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 6;
+    padding-left: 3rem;
+  }
+
+  .blogichiran_div3 {
+    grid-row-start: 1;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding-top: 2rem;
+    padding-right: 0;
+  }
+  .blogichiran_div4 {
+    grid-row-start: 3;
+    grid-row-end: 6;
+    grid-column-start: 3;
+    grid-column-end: 6;
+    padding-top: 1rem;
+    padding-left: 3rem;
+  }
+
+  .blogichiran_div4 p {
+    -webkit-line-clamp: 5;
+  }
+
+  .bloglist_btn {
+    width: 23.7rem;
+    height: 5.5rem;
+    font-size: 1.4rem;
+  }
+  .bloglist_btn:hover {
+  }
+
+  /*---------------------------------------
+   各ブログ
+  -----------------------------------------*/
+  .eachblog_div1 {
+    height: 479px;
+    background-image: url("/Rectangle296.png");
+  }
+  .eachblog_div1 h1 {
+    font-size: 60%;
+    margin: 180px 0;
+  }
+
+  /*-----------------------------------------------
+ギャラリー
+-----------------------------------------------*/
+  #gallery {
+    margin: 8rem 0 13rem 0;
+  }
+
+  .swiper-slide {
+    color: #ffffff;
+    width: 414px;
+    height: 100%;
+    text-align: center;
+  }
+  #gallery .gallery_button_pc_only {
+    display: block;
+  }
+  .swiper-button-prev {
+    top: 38%;
+  }
+  .swiper-button-next {
+    top: 38%;
+  }
+
+  .gallery_title h1 {
+    font-weight: 700;
+    font-size: 5rem;
+    line-height: 5.7rem;
+    letter-spacing: 0.1em;
+    margin: 0;
+  }
+
+  .gallery_text h2 {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.9rem;
+    letter-spacing: 0.1em;
+  }
+  /*-----------------------------------------------
+活動日程
+-----------------------------------------------*/
+  .sidevarg-schedule {
+    padding: 3rem 0;
+    right: 150px;
+    left: -100px;
+  }
+  .schedule-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 0 0 10%;
+  }
+  .schedule-contents {
+    width: 40%;
+    margin: 5% 0 5% 5%;
+  }
+  .sidevarg-schedule h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-inline-start: 0%;
+    text-align: start;
+    margin: 0;
+  }
+  .sidevarg-schedule h2 {
+    letter-spacing: 0.1em;
+    font-size: 2rem;
+    margin-top: 0.8rem;
+    margin-bottom: 4.5rem;
+    margin-inline-start: 0%;
+    text-align: start;
+    margin-left: 0;
+  }
+  .sidevarg-schedule p {
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    margin-inline-start: 5%;
+    text-align: start;
+    margin: 0;
+  }
+  .g-calendar {
+    height: 50rem;
+    width: 50%;
+    max-width: 70rem;
+  }
+  /*-----------------------------------------------
+活動場所
+-----------------------------------------------*/
+  .place_contents {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  .place_contents .message {
+    margin-top: 0;
+    padding-top: 10%;
+  }
+  .place_title p {
+    font-size: 2rem;
+  }
+  .place_message p {
+    margin: 4rem 0;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+  }
+  .place_h2 {
+    margin: 0;
+    font-size: 5rem;
+  }
+  .place_btn {
+    font-size: 1.4rem;
+    border: #000 solid 3px;
+  }
+  .place_btn:hover {
+    border-color: #2e98d2;
+    color: #2e98d2;
+  }
+  #place #button {
+    display: flex;
+    margin: 0;
+  }
+  #place #btn1 {
+    margin-right: 10%;
+  }
+  #place #btn2 {
+    margin-left: 10%;
+  }
+  /*-----------------------------------------------
+フッター
+-----------------------------------------------*/
+  .footer_wrapper {
+    position: relative;
+    height: 55.8rem;
+  }
+
+  .footer_contact {
+    position: absolute;
+    height: 23.4rem;
+    top: 8rem;
+    left: 12rem;
+    right: 12rem;
+    margin: auto;
+    z-index: 100;
+
+    background-color: #2e98d2;
+  }
+
+  .footer_contact p {
+    color: #fff;
+    text-align: center;
+    margin: 4.5rem 3rem 0em 3rem;
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+  }
+
+  .contact-btn {
+    display: block;
+    background-color: #fff;
+    width: 31rem;
+    height: 5.9rem;
+    margin: auto;
+    transition: 0.3s all;
+  }
+
+  .contact-btn:hover {
+    background-color: #000000;
+    transition: 0.3s all;
+  }
+
+  .contact-btn:hover p {
+    color: #fff;
+    transition: 0.3s all;
+  }
+
+  .contact-btn p {
+    color: #000;
+    padding: 1.9rem;
+    font-family: "Economica";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.2rem;
+    letter-spacing: 0.2em;
+    margin-top: 3rem;
+    transition: 0.3s all;
+  }
+
+  .footer_link {
+    position: relative;
+    height: 36.1rem;
+    width: 100%;
+    top: 19.7rem;
+    background-color: #202020;
+    z-index: 50;
+  }
+
+  .footer_link nav {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    top: 23rem;
+  }
+
+  .footer_link ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding-inline-start: 0;
+    width: initial;
+    margin: 0 auto;
+    order: 2;
+  }
+
+  .footer_link ul li {
+    display: flex;
+    margin: 0.6rem 0 0.6rem 2rem;
+    width: initial;
+    margin-left: 5rem;
+    transition: 0.3s all;
+  }
+
+  .footer_link ul li:hover {
+    opacity: 0.6;
+    transition: 0.3s all;
+  }
+
+  .footer_link a {
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer_link img {
+    width: 2.3rem;
+    margin: 0 1.6rem 0 0;
+  }
+
+  #footer_logo {
+    position: relative;
+    width: 8.1rem;
+    height: 4rem;
+    top: 0;
+    margin: 0 auto;
+    font-family: "Economica";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    letter-spacing: 0.2em;
+    color: #ffffff;
+    order: 1;
+    transition: 0.3s all;
+  }
+
+  #footer_logo:hover {
+    opacity: 0.6;
+    transition: 0.3s all;
+  }
+
+  .footer_copyright {
+    position: relative;
+    width: 100%;
+    top: 28rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer_copyright p {
+    font-family: "Noto Sans JP";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.73rem;
+    letter-spacing: 0.2em;
+    color: #ffffff;
+  }
+}
